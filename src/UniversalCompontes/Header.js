@@ -1,16 +1,19 @@
-
+import React from 'react';
 
 import "./Header.css"
-import ImagenDeBanco from '../img-entityComponentes/imagen01hyjpg.jpg';
+import ImagenDeBanco from '../UniversalCompontes/ImgUniversal/imagen01hyjpg.jpg';
 
-<img className="imgBanck" src={ImagenDeBanco} width={500} alt="Imagen del banco" />
-import React from 'react';
+
+
 
 const Header = ({ entityName, userName, userRole }) => {
   return (
+    <div>
     <header>
+    
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
+          
           <a className="navbar-brand" href="/">Nombre de tu Cooperativa</a>
           <button
             className="navbar-toggler"
@@ -44,6 +47,7 @@ const Header = ({ entityName, userName, userRole }) => {
         </div>
       </nav>
     </header>
+    </div>
   );
 };
 
