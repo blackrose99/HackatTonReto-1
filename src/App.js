@@ -35,7 +35,8 @@ function App() {
             {/* Rura para mostrar la imformacion de un cleinte */}
             <Route path="/cliente/:id" element={<ClientInfo />} />
 
-
+            {/* Ruta del componente Cliente */}
+            
 
           </Routes>
         </div>
