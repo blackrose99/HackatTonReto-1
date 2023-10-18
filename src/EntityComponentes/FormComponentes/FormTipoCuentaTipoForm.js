@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './FormTipoCuentaTipoForm.css';
 const CombinedForm = () => {
   const [accountTypes, setAccountTypes] = useState([]);
   const [formTypes, setFormTypes] = useState([]);
@@ -39,39 +39,42 @@ const CombinedForm = () => {
   };
 
   return (
+    <div className="combined-form-container">
+    <h2 className="combined-form-title">Seleccione el Tipo de Cuenta y el Tipo de Formulario</h2>
     <div>
-      <h2>Seleccione el Tipo de Cuenta y el Tipo de Formulario</h2>
-      <div>
-        <label>Selecciona el Tipo de Cuenta:</label>
-        <select
-          value={selectedAccountType}
-          onChange={(e) => handleAccountTypeChange(e.target.value)}
-        >
-          <option value="">Seleccione un tipo de cuenta</option>
-          {accountTypes.map((type) => (
-            <option key={type.id} value={type.id}>
-              {type.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <label>Selecciona el Tipo de Formulario:</label>
-        <select
-          value={selectedFormType}
-          onChange={(e) => handleFormTypeChange(e.target.value)}
-        >
-          <option value="">Seleccione un tipo de formulario</option>
-          {formTypes.map((type) => (
-            <option key={type.id} value={type.id}>
-              {type.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      {/* Resto del contenido del formulario */}
-      <button onClick={() => handleSubmit()}>Siguiente</button>
+      <label className="combined-form-label">Selecciona el Tipo de Cuenta:</label>
+      <select
+        className="combined-form-select"
+        value={selectedAccountType}
+        onChange={(e) => handleAccountTypeChange(e.target.value)}
+      >
+        <option value="">Seleccione un tipo de cuenta</option>
+        {accountTypes.map((type) => (
+          <option key={type.id} value={type.id}>
+            {type.name}
+          </option>
+        ))}
+      </select>
     </div>
+    <div>
+      <label className="combined-form-label">Selecciona el Tipo de Formulario:</label>
+      <select
+        className="combined-form-select"
+        value={selectedFormType}
+        onChange={(e) => handleFormTypeChange(e.target.value)}
+      >
+        <option value="">Seleccione un tipo de formulario</option>
+        {formTypes.map((type) => (
+          <option key={type.id} value={type.id}>
+            {type.name}
+          </option>
+        ))}
+      </select>
+    </div>
+    {/* Resto del contenido del formulario */}
+    <button className="combined-form-button">Siguiente</button>
+  </div>
+  
   );
 };
 

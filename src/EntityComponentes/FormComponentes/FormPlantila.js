@@ -52,32 +52,33 @@ const CustomForm = () => {
       <div className="container-fluid form-container">
         <div className="row">
           <div className="col-lg">
-            <h2 className="form-title form-wrapper">
+            
+            <form onSubmit={handleSubmit} className="form-wrapper">
+            <h2 class="form-title">
               Formulario Personalizado
             </h2>
-            <form onSubmit={handleSubmit} className="form-wrapper">
               <div>
                 <label className="form-label">
-                  Nombre del Cliente: {formData.clientName}
+                  <b>Nombre del Cliente:</b> {formData.clientName}
                 </label>
               </div>
               <div>
                 <label className="form-label">
-                  Tipo de Cuenta: {formData.cuenta}
+                <b>Tipo de Cuenta:</b> {formData.cuenta}
                 </label>
               </div>
 
               <div>
-                <label className="form-label">Nombre Del Qr</label>
+                <label className="form-label"><b>Nombre Del Qr:</b></label>
                 <input type="text" name="" className="form-input"></input>
               </div>
               <div>
-                <label className="form-label">Direccion</label>
+                <label className="form-label"><b>Direccion:</b></label>
                 <input type="text" name="" className="form-input"></input>
               </div>
               <div>
                 <label for="imagen" className="form-label">
-                  Selecciona una imagen:
+                <b>Si desea puede cargar una imagen:</b>
                 </label>
                 <input
                   type="file"
@@ -88,12 +89,12 @@ const CustomForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="form-label">Tipo de Precio:</label>
+                <label className="form-label"><b>Tipo de Precio:</b></label>
                 <select
                   value={formData.priceType}
                   onChange={handlePriceTypeChange}
                   required
-                  className="form-input"
+                  className="form-input center-select"
                 >
                   <option value="fixed">Fijo</option>
                   <option value="indefinite">Indefinido</option>
@@ -101,7 +102,7 @@ const CustomForm = () => {
               </div>
               {formData.priceType === "fixed" && (
                 <div>
-                  <label className="form-label">Precio Fijo:</label>
+                  <label className="form-label"><b>Precio Fijo:</b></label>
                   <input
                     type="number"
                     value={formData.customPrice}
@@ -111,7 +112,7 @@ const CustomForm = () => {
                   />
                 </div>
               )}
-              <div className="center-button">
+              <div className="center-button mt-3">
               <div type="submit" class="button" data-tooltip="Size: 20Mb">
                 <div class="button-wrapper">
                   <div class="text">Generar QR</div>
