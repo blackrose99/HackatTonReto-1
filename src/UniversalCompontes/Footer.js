@@ -37,4 +37,4 @@ function Footer() {
 }
 
 export default Footer;
-import "./Footer.css"
+
