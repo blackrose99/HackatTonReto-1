@@ -34,11 +34,11 @@ const Header = ({ entityName, userName, userRole }) => {
                   </li>
                 </ul>
               </div>
-              <div className="user-info custom-user-info">
+
                 <p className="entity-name" id='texto'>Iniciar Sesión: {entityName}</p>
                 {/* <p className="user-name" id='texto'>Usuario: {userName}</p>
                 <p className="user-role" id='texto'>Rol: {userRole}</p> */}
-              </div>
+
             </div>
           </nav>
           <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id='LogoImg' className="header-image" />
