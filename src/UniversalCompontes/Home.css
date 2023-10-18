@@ -1,15 +1,35 @@
+* {
+    font-family: 'Arvo', serif;
+}
+
 .diseñoHome {
-    background-color: #c3d3c9;
-    padding: 20px;
     text-align: center;
-    border: 2px solid #93c323;
-    border-radius: 10px;
-    margin: 20px;
+    background-image: url('../UniversalCompontes/ImgUniversal/bgHome.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0; /* Agrega espacio alrededor del contenido para evitar que se superponga con la imagen de fondo */
+}
+
+#textos {
+    padding: 20px;
+    border-radius: 10px; /* Añade bordes redondeados al contenedor de texto */
+    display: inline-block; /* Hace que el contenedor se ajuste al contenido */
 }
 
 .diseñoHome h1 {
     color: #0e5958;
-    font-size: 24px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.diseñoHome h2 {
+    color: #93c323;
+}
+
+.diseñoHome h3 {
+    color: #c3d3c9;
 }
 
 .diseñoHome p {
@@ -24,6 +44,7 @@
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .diseñoHome button:hover {

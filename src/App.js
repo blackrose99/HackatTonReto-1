@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="">
       <BrowserRouter>
-        <div className="container">
+        <div className="container-fluid">
           <Routes>
             {/* Ruta para cargar pagina de inico en la ruta / */}
             <Route path="/" element={<Home />} />
