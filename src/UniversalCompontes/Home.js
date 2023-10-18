@@ -7,7 +7,7 @@ import "./Home.css";
 
 //Importar Footer 
 import Footer from "./Footer";
-import Header from "./Header";
+
 
 
 
