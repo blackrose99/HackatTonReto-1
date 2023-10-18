@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
+
+//Importaciones del Componente Header
 import HeaderCliente from "./HeaderCliente";
+
+//Importaciones del Componente CuentaInfo
+import CuentaInfo from './cuentaInfo';
+
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ClientInfo = ({ clientId }) => {
@@ -41,15 +47,7 @@ const ClientInfo = ({ clientId }) => {
   return (
     <div>
       <HeaderCliente/>
-
-      <h2>Información del Cliente</h2>
-      <p><strong>Nombre:</strong> {clientData.name}</p>
-      <p><strong>Documento de Identidad:</strong> {clientData.documentId}</p>
-      <p><strong>Correo Electrónico:</strong> {clientData.email}</p>
-      <p><strong>Número de Teléfono:</strong> {clientData.phone}</p>
-      <p><strong>Ciudad: {clientData.ciudad}</strong></p>
-      <p><strong>Dirección: {clientData.direccion}</strong></p>
-      <p><strong>Estado de la cuenta: {clientData.estadoCuenta}</strong></p>
+      <CuentaInfo/>
 
       {/* Mostrar más detalles según sea necesario */}
       <Link to="/crearQr" className="btn btn-info mt-3 mb-5">
