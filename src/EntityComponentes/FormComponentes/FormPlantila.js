@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../../UniversalCompontes/Header";
+import HeaderCliente from "../../EntityComponentes/Cliente/HeaderCliente";
 import Footer from "../../UniversalCompontes/Footer";
 import "./FormPlantilla.css";
 
@@ -47,7 +47,7 @@ const CustomForm = () => {
 
   return (
     <div>
-      <Header />
+      <HeaderCliente />
 
       <div className="container-fluid form-container">
         <div className="row">
