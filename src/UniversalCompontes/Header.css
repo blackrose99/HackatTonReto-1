@@ -37,6 +37,7 @@
 
   #texto{
     color: #0e5958;
+    font-weight: bold;
   }
 
   #LogoImg::before {
@@ -80,6 +81,25 @@
     background-color: #96bd0d;
   }
 
+  .custom-user-info {
+    display: flex;
+    flex-direction: row; /* Disposición horizontal */
+  }
+  
+  .custom-user-info p {
+    margin-right: 10px; /* Espacio entre los elementos horizontales */
+  }
+
+  #colorTotal{
+    background-color: #ffff;
+  }
+
+  #reducir{
+    background-color: #000 ;
+  }
+  .grande {
+    font-size: x-large; /* Tamaño de fuente "extra grande" */
+  }
   
 
   
