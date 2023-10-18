@@ -22,7 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
 
             {/* Ruta de lo que va a ver el usuario final para pagar con Qr */}
-            <Route path="/user" element={<formQrPago/>} />
+            {/* <Route path="/user" element={<formQrPago/>} /> */}
 
           </Routes>
         </div>
