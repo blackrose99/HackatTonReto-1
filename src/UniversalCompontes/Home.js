@@ -8,6 +8,10 @@ import "./Home.css";
 //Importar Footer 
 import Footer from "./Footer";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0e51c18ab381f014e747f954677c69d7794f4e5c
 
 function Home() {
     return (
@@ -21,6 +25,7 @@ function Home() {
 
                 <div class="row">
                     <div class="col-lg-12">
+<<<<<<< HEAD
                         <div class="diseñoHome">
                             <div id="textos">
                                 <h1>Bienvenido a nuestra página de inicio</h1>
@@ -29,6 +34,13 @@ function Home() {
                                 <p>Esta es una página de inicio de ejemplo.</p>
                                 <button>¡Comenzar!</button>
                             </div>
+=======
+                        <div className="diseñoHome">
+                            
+                            <h1>Bienvenido a nuestra página de inicio</h1>
+                            <p>Esta es una página de inicio de ejemplo.</p>
+                            <button>¡Comenzar!</button>
+>>>>>>> 0e51c18ab381f014e747f954677c69d7794f4e5c
 
                         </div>
                     </div>
