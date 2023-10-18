@@ -48,7 +48,7 @@ const Login = () => {
         <button type="submit">Iniciar Sesión</button>
         <Link to="/" className="navbar-brand">
                   <h4 className="btn btn-primary">Cancelar</h4>
-                </Link>
+        </Link>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>
