@@ -1,0 +1,37 @@
+/* header.css */
+
+/* Estilo para el contenedor del encabezado */
+.header-container {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #93c323; /* Color de texto en el encabezado */
+    padding: 20px; /* Espaciado interior del encabezado */
+  }
+  
+  /* Estilo para el logotipo del encabezado */
+  .header-logo {
+    font-size: 24px; /* Tamaño de fuente del logotipo */
+    font-weight: bold; /* Peso de fuente en negrita */
+  }
+  
+  /* Estilo para la navegación en el encabezado */
+  .header-nav {
+    list-style: none; /* Elimina los puntos de la lista en la navegación */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-nav li {
+    display: inline; /* Hace que los elementos de la lista se muestren en línea */
+    margin-right: 20px; /* Espaciado entre elementos de la lista */
+  }
+  
+  .header-nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #c3d3c9; /* Color de texto en los enlaces de navegación */
+  }
+  
+  /* Cambiar el color de los enlaces cuando se desplaza el cursor sobre ellos */
+  .header-nav a:hover {
+    color: #0e5958; /* Color de texto en los enlaces al pasar el cursor */
+  }
+  

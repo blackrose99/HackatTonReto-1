@@ -3,10 +3,14 @@ import React from "react";
 
 import "./Home.css";
 import Footer from "./Footer";
+import Header from "./Header";
 
 function Home() {
     return (
         <div>
+            
+
+        <div/>
 
             <div className="diseñoHome">
 
