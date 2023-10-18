@@ -6,12 +6,12 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ entityName, userName, userRole }) => {
   return (
-    <div id='reducir'>
+    <div id='reducir' className="borde">
       <header>
         <div className="header-container-fluid" id='colorTotal'>
           <nav className="navbar navbar-expand-lg navbar-light container-fluid" id='colorBarra'>
-            <div className="container" id='colorBarra'>
-              <a className="navbar-brand grande" href="/" id='texto'>Nombre de tu Cooperativa</a>
+            <div className="container" id=''>
+              {/* <a className="navbar-brand grande" href="/" id='texto'>Nombre de tu Cooperativa</a> */}
               <button
                 className="navbar-toggler"
                 type="button"

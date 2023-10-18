@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import InfoClient from './infoclient'; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
 import { useParams } from "react-router-dom";

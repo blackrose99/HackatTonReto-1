@@ -68,6 +68,7 @@
   }
   #colorBarra{
     background-color: #96bd0d;
+    border-bottom-right-radius: 50%;
   }
 
   .custom-user-info {
@@ -107,5 +108,13 @@
   color: #041817;
 }
 
+.imagen-qr {
+  max-width: 100%; /* La imagen se reducirá a medida que el contenedor se haga más pequeño */
+  height: auto; /* Mantiene la relación de aspecto original */
+}
 
+
+.borde{
+  border-bottom-right-radius: 50%;
+}
   
