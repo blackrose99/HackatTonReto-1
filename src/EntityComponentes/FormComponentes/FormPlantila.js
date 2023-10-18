@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Header from "../../UniversalCompontes/Header";
+import Footer from "../../UniversalCompontes/Footer";
+import "./FormPlantilla.css";
 
 const CustomForm = () => {
   const [formData, setFormData] = useState({
@@ -44,60 +47,103 @@ const CustomForm = () => {
 
   return (
     <div>
-      <h2>Formulario Personalizado</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nombre del Cliente: {formData.clientName}</label>
-        </div>
-        <div>
-          <label> Tipo de Cuenta: {formData.cuenta}</label>
-        </div>
-        <div>
-          <label>Saldo de la Cuenta: {formData.accountBalance}</label>
-        </div>
+      <Header />
 
-        <div>
-          {/* este cambia dependiendo del tipo de plantilla si es negocio 
-          le pide que digite el nombre de su negocio, si es personal no pide nada 
-          si es inmoviliaria le pide el nombre de la emoresa  */}
+      <div className="container-fluid form-container">
+        <div className="row">
+          <div className="col-lg">
+            <h2 className="form-title form-wrapper">
+              Formulario Personalizado
+            </h2>
+            <form onSubmit={handleSubmit} className="form-wrapper">
+              <div>
+                <label className="form-label">
+                  Nombre del Cliente: {formData.clientName}
+                </label>
+              </div>
+              <div>
+                <label className="form-label">
+                  Tipo de Cuenta: {formData.cuenta}
+                </label>
+              </div>
 
-          <label>Nombre Del Qr</label>
-          <input type="text" name=""></input>
-        </div>
-        <div>
-          {/* pide direccion dependiento del tipo de formulario si es personal no pide */}
-          <label>Direccion</label>
-          <input type="text" name=""></input>
-        </div>
-
-        <div>
-          <label for="imagen">Selecciona una imagen:</label>
-          <input type="file" id="imagen" name="imagen" accept="image/*"></input>
-        </div>
-        <div>
-          <label>Tipo de Precio:</label>
-          <select
-            value={formData.priceType}
-            onChange={handlePriceTypeChange}
-            required
-          >
-            <option value="fixed">Fijo</option>
-            <option value="indefinite">Indefinido</option>
-          </select>
-        </div>
-        {formData.priceType === "fixed" && (
-          <div>
-            <label>Precio Fijo:</label>
-            <input
-              type="number"
-              value={formData.customPrice}
-              onChange={handleCustomPriceChange}
-              required
-            />
+              <div>
+                <label className="form-label">Nombre Del Qr</label>
+                <input type="text" name="" className="form-input"></input>
+              </div>
+              <div>
+                <label className="form-label">Direccion</label>
+                <input type="text" name="" className="form-input"></input>
+              </div>
+              <div>
+                <label for="imagen" className="form-label">
+                  Selecciona una imagen:
+                </label>
+                <input
+                  type="file"
+                  id="imagen"
+                  name="imagen"
+                  accept="image/*"
+                  className="form-input"
+                ></input>
+              </div>
+              <div>
+                <label className="form-label">Tipo de Precio:</label>
+                <select
+                  value={formData.priceType}
+                  onChange={handlePriceTypeChange}
+                  required
+                  className="form-input"
+                >
+                  <option value="fixed">Fijo</option>
+                  <option value="indefinite">Indefinido</option>
+                </select>
+              </div>
+              {formData.priceType === "fixed" && (
+                <div>
+                  <label className="form-label">Precio Fijo:</label>
+                  <input
+                    type="number"
+                    value={formData.customPrice}
+                    onChange={handleCustomPriceChange}
+                    required
+                    className="form-input"
+                  />
+                </div>
+              )}
+              <div className="center-button">
+              <div type="submit" class="button" data-tooltip="Size: 20Mb">
+                <div class="button-wrapper">
+                  <div class="text">Generar QR</div>
+                  <span class="icon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                      role="img"
+                      width="2em"
+                      height="2em"
+                      preserveAspectRatio="xMidYMid meet"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                      ></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              </div>
+              
+            </form>
           </div>
-        )}
-        <button type="submit">Generar QR</button>
-      </form>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
