@@ -1,3 +1,6 @@
+import "./Cliente.css"
+import Header from "../../UniversalCompontes/Header";
+import Footer from "../../UniversalCompontes/Footer";
 import React, { useState, useEffect } from "react";
 
 export function InfoClient({ data }) {
@@ -33,14 +36,22 @@ export function InfoClient({ data }) {
 
     return (
         <div>
-            <h2>Información del Cliente</h2>
-            <p><strong>Nombre:</strong> {clientInfo.name}</p>
-            <p><strong>Documento de Identidad:</strong> {clientInfo.document}</p>
-            <p><strong>Correo Electrónico:</strong> {clientInfo.email}</p>
-            <p><strong>Teléfono:</strong> {clientInfo.phone}</p>
-            <p><strong>Cuenta creada:</strong> {clientInfo.createdAt}</p>
-            <p><strong>Actualización:</strong> {clientInfo.updatedAt}</p>
+        <Header/>
+       <div className="datosCliente">
+            <div className="datosinter">
+                <h2>Información del Cliente</h2>
+                <p><strong>Nombre:</strong> {clientInfo.name}</p>
+                <p><strong>Documento de Identidad:</strong> {clientInfo.document}</p>
+                <p><strong>Correo Electrónico:</strong> {clientInfo.email}</p>
+                <p><strong>Teléfono:</strong> {clientInfo.phone}</p>
+                <p><strong>Cuenta creada:</strong> {clientInfo.createdAt}</p>
+                <p><strong>Actualización:</strong> {clientInfo.updatedAt}</p>
+            </div>
+        </div> 
+        <Footer/>
         </div>
+    
+        
     );
 }
 
