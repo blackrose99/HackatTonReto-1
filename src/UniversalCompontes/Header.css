@@ -40,27 +40,16 @@
     font-weight: bold;
   }
 
-  #LogoImg::before {
-    content: '';
-    position: absolute;
-    top: 5px; /* Ajusta la distancia superior según tus necesidades */
-    left: 5px; /* Ajusta la distancia izquierda según tus necesidades */
-    right: 5px; /* Ajusta la distancia derecha según tus necesidades */
-    bottom: 5px; /* Ajusta la distancia inferior según tus necesidades */
-    background-image: linear-gradient(45deg, transparent 25%, #000 25%, #000 50%, transparent 50%, transparent 75%, #000 75%, #000);
-    background-size: 28.28px 28.28px; /* Ajusta el tamaño de las rayas */
-    filter: blur(5px); /* Aplica un efecto de difuminado al borde de la imagen */
-    z-index: -1; /* Coloca el pseudo-elemento detrás de la imagen principal */
-    animation: rayas 4s linear infinite;
+
+  
+  #LogoImg {
+    position: center;
+    z-index: 1;
+    align-items: center;
+    animation: desvanecer 4s ease-in-out infinite;
+    
   }
   
-  #LogoImg img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-    animation: desvanecer 4s ease-in-out infinite;
-  }
 
   @keyframes desvanecer {
     0% {
@@ -100,8 +89,23 @@
   .grande {
     font-size: x-large; /* Tamaño de fuente "extra grande" */
   }
-  
 
-  
-  
+  .iniciar{
+    background-color: #5f9750;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .iniciar:hover {
+    background-color: #accc54;
+}
+#texto:hover {
+  color: #041817;
+}
+
+
   

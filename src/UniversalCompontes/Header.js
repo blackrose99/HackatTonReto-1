@@ -1,13 +1,13 @@
 import React from 'react';
 import '../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
-import { Link, useLocation } from 'react-router-dom'; // Importa Link y useLocation
-
+import ImagenDeQR from '../UniversalCompontes/ImgUniversal/codigo-qr.png';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ entityName, userName, userRole }) => {
   return (
     <div id='reducir'>
-      <header >
+      <header>
         <div className="header-container-fluid" id='colorTotal'>
           <nav className="navbar navbar-expand-lg navbar-light container-fluid" id='colorBarra'>
             <div className="container" id='colorBarra'>
@@ -15,39 +15,34 @@ const Header = ({ entityName, userName, userRole }) => {
               <button
                 className="navbar-toggler"
                 type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
+                data-toggle="collapse" // Clase de Bootstrap 4
+                data-target="#navbarNav"
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link" href="/" id='texto'>Mis QRs</a>
+                    <div className="nav-content">
+                      <h4><a className="nav-link" href="/" id='texto'>Mis QRs</a></h4>
+                    </div>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/entidad" id='texto'>Nuevo Formulario</a>
+                    <h4><a className="nav-link" href="/entidad" id='texto'>Formularios</a></h4>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/usuario" id='texto'>Panel de Usuario</a>
+                    <h4><a className="nav-link" href="/usuario" id='texto'>Panel de Usuario</a></h4>
                   </li>
-
                   <li>
-                  <Link to="/login-cliente" className="navbar-brand">
-                  <h4 className="btn btn-primary">Iniciar Sesión</h4>
-                </Link>
+                    <Link to="/login-cliente" className="navbar-brand">
+                      <h4 className="iniciar">Iniciar Sesión</h4>
+                    </Link>
                   </li>
-
-
                 </ul>
               </div>
-        
             </div>
           </nav>
-          <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id='LogoImg' className="header-image" />
+          <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id='LogoImg' className="imagen-qr" />
         </div>
       </header>
     </div>

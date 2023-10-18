@@ -9,6 +9,7 @@
     background-position: center;
     background-repeat: no-repeat;
     padding: 100px 0; /* Agrega espacio alrededor del contenido para evitar que se superponga con la imagen de fondo */
+    
 }
 
 #textos {
@@ -51,6 +52,13 @@
     background-color: #accc54;
 }
 
+@media (max-width: 767px) {
+    .diseñoHome {
+      background-image: none; /* Elimina la imagen de fondo en dispositivos con un ancho máximo de 767px (ajusta este valor según tus necesidades) */
+      padding: 0; /* Elimina el espacio alrededor del contenido en dispositivos móviles */
+      
+    }
+}
 .diseñoHome {
     max-width: 100%; /* La imagen no superará su ancho original */
     height: auto; /* Mantendrá la relación de aspecto original */
