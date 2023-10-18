@@ -61,6 +61,10 @@
 
   }
 
+  .card{
+    border: none;
+  }
+
   .card-body >form > input{
       width: 100%;
   }
@@ -133,5 +137,37 @@
   
   .redesSociales i:hover {
     color: #0e5958; /* Cambia el color de los iconos al pasar el mouse */
+  }
+
+  .finalFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 50%;
+  }
+  
+  .arriba {
+    background-color: #96bd0d;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .arriba p {
+    color: #0e5958;
+    font-size: 12px;
+  }
+  
+  .abajo {
+    background-color: #afcd47; /* Aplicar color de fondo al div "abajo" */
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .abajo img{
+    width: 200px;
+    height: 100%;
+    margin: 0 100px;
   }
   
