@@ -4,7 +4,10 @@ import ImagenDeBanco from '../img-entityComponentes/imagen01hyjpg.jpg';
 function FormQrPago() {
     return (
         <div>
-            <img className="imgBanck" src={ImagenDeBanco} width={500} alt="Imagen del banco" />
+
+            <h2>
+                hello word
+            </h2>
         </div>
     )
 }
