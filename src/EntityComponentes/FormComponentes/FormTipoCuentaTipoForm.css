@@ -1,45 +1,32 @@
-/* Estilos específicos para CombinedForm */
-.combined-form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.combined-form-title {
-  font-size: 1.5rem;
-}
-
-.combined-form-label {
-  display: block;
-  margin-top: 10px;
-}
-
-.combined-form-select, .combined-form-button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-/* Estilos específicos para dispositivos móviles */
-@media (max-width: 768px) {
-  .combined-form-container {
-    padding: 10px;
-  }
-
-  .combined-form-title {
-    font-size: 1.2rem;
-  }
-
-  .combined-form-label {
-    margin-top: 5px;
+.container2 {
+    border: 1px solid #ccc; /* Borde de 1 píxel con color gris claro */
+    box-shadow: 3px 3px 5px #888; /* Sombreado */
+    text-align: center; /* Centrado del contenido */
+    padding: 20px; /* Espaciado interno para separar el contenido del borde */
+    width: 28%; /* Ajusta el ancho de la caja según tus necesidades */
+    margin: 80px auto; /* Centra la caja horizontalmente */
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
+    -moz-box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
+    box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
+    color: #0e5958;
+    
     
   }
-
-  .combined-form-select, .combined-form-button {
-    padding: 8px;
+  
+  .form-section {
+    margin: 10px 0; /* Espaciado entre secciones del formulario */
   }
-}
-combined-form-container{
-    background-color: aquamarine;
-}
+  
+  .combined-form-title {
+    font-weight: bold;
+  }
+  
+  .combined-form-label {
+    /* Estilos para las etiquetas del formulario si es necesario */
+  }
+  
+  .combined-form-select {
+    /* Estilos para los selectores del formulario si es necesario */
+  }
+  

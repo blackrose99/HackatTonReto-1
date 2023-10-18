@@ -24,7 +24,7 @@ const Header = ({ entityName, userName, userRole }) => {
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
                     <div className="nav-content">
-                      <h4><a className="nav-link" href="/" id='texto'>Creando sueños desde 1962 </a></h4>
+                      <h2 className='frase'>Creando sueños desde 1962 </h2>
                     </div>
                   </li>
                   <li className="nav-item">
