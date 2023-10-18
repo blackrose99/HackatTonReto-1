@@ -1,5 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .App {
   text-align: center;
+  padding: 0%;
 }
 
 .App-logo {
