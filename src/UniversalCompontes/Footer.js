@@ -1,6 +1,10 @@
 import "./Footer.css"
 import React from "react";
 
+import ImagenDeFogacoop from '../UniversalCompontes/ImgUniversal/fogacoop.png';
+import ImagenDesupersolidaria from '../UniversalCompontes/ImgUniversal/supersolidaria.png';
+
+
 function Footer() {
   return (
     <footer>
@@ -70,18 +74,18 @@ function Footer() {
           <div className="col-lg-3">
             <div className="footer-contact">
               <h2 className="bold-text titulosFooter">ACCESOS RÁPIDOS</h2>
-              <a href="#" class="accesoRapido">Ley 2300 de 2023</a>
-              <a href="#" class="accesoRapido">Balance social</a>
-              <a href="#" class="accesoRapido">Blog</a>
-              <a href="#" class="accesoRapido">Seguridad financiera</a>
-              <a href="#" class="accesoRapido">Tasas y tarifas</a>
-              <a href="#" class="accesoRapido">Reglamento crédito</a>
-              <a href="#" class="accesoRapido">Preguntas frecuentes</a>
-              <a href="#" class="accesoRapido">Asamblea</a>
-              <a href="#" class="accesoRapido">Consumidor financiero</a>
-              <a href="#" class="accesoRapido">Inscripción Comunidad Empresarial</a>
-              <a href="#" class="accesoRapido">Repositorio COVID-19</a>
-              <a href="#" class="accesoRapido">Alianza Fondo Nacional de Garantías</a>
+              <a href="#">Ley 2300 de 2023</a>
+              <a href="#">Balance social</a>
+              <a href="#">Blog</a>
+              <a href="#">Seguridad financiera</a>
+              <a href="#">Tasas y tarifas</a>
+              <a href="#">Reglamento crédito</a>
+              <a href="#">Preguntas frecuentes</a>
+              <a href="#">Asamblea</a>
+              <a href="#">Consumidor financiero</a>
+              <a href="#">Inscripción Comunidad Empresarial</a>
+              <a href="#">Repositorio COVID-19</a>
+              <a href="#">Alianza Fondo Nacional de Garantías</a>
             </div>
           </div>
           <div className="col-lg-3 zonform">
@@ -115,10 +119,19 @@ function Footer() {
             <i class='bx bxl-tiktok' ></i>
           </div>
         </div>
+        <div class="row mt-3">
+          <div className="col-lg finalFooter">
+            <div class="arriba">
+              <p>Ninguna parte del contenido de este sitio puede ser copiado, difundido o distribuido sin permiso expreso de Financiera Comultrasan. Derechos Reservados 2005-2023 / Bucaramanga, Santander, Colombia.</p>
+            </div>
+            <div class="abajo">
+              <img src={ImagenDeFogacoop} alt="Logo Fogacoop" className="" />
+              <img src={ImagenDesupersolidaria} alt="Logo supersolidaria" className="" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="text-center mt-4">
-        <p>&copy; {new Date().getFullYear()} Cooperativa de Banco. Todos los derechos reservados.</p>
-      </div>
+      
     </footer>
   );
 }

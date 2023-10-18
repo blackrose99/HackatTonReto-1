@@ -8,7 +8,7 @@ const Header = ({ entityName, userName, userRole }) => {
   return (
     <div id='reducir' className="borde">
       <header>
-        <div className="header-container-fluid" id='colorTotal'>
+        <div className="header-container-fluid" >
           <nav className="navbar navbar-expand-lg navbar-light container-fluid" id='colorBarra'>
             <div className="container" id=''>
               {/* <a className="navbar-brand grande" href="/" id='texto'>Nombre de tu Cooperativa</a> */}
@@ -42,7 +42,9 @@ const Header = ({ entityName, userName, userRole }) => {
               </div>
             </div>
           </nav>
+          <div id='colorTotal'>
           <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id='LogoImg' className="imagen-qr" />
+          </div>
         </div>
       </header>
     </div>

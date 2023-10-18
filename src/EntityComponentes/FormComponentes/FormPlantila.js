@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const CustomForm = () => {
   const [formData, setFormData] = useState({
-    clientName: 'Nombre del Cliente',
+    clientName: "Nombre del Cliente",
+    cuenta: "Ahorro",
     accountBalance: 1000, // Valor predeterminado del saldo de la cuenta del cliente
-    formType: '', // Tipo de formulario seleccionado
-    priceType: 'fixed', // Valor predeterminado de precio fijo
-    customPrice: '', // Precio personalizado (si elige precio fijo)
+    formType: "", // Tipo de formulario seleccionado
+    priceType: "fixed", // Valor predeterminado de precio fijo
+    customPrice: "", // Precio personalizado (si elige precio fijo)
   });
 
   const handleFormTypeChange = (e) => {
@@ -14,7 +15,7 @@ const CustomForm = () => {
   };
 
   const handlePriceTypeChange = (e) => {
-    setFormData({ ...formData, priceType: e.target.value, customPrice: '' });
+    setFormData({ ...formData, priceType: e.target.value, customPrice: "" });
   };
 
   const handleCustomPriceChange = (e) => {
@@ -30,13 +31,15 @@ const CustomForm = () => {
     // Ejemplo: Generar un QR con la información seleccionada.
     const qrData = {
       clientName: formData.clientName,
+      clientName: formData.cuenta,
       accountBalance: formData.accountBalance,
       formType: formData.formType,
       priceType: formData.priceType,
-      customPrice: formData.priceType === 'fixed' ? formData.customPrice : 'Indefinido',
+      customPrice:
+        formData.priceType === "fixed" ? formData.customPrice : "Indefinido",
     };
 
-    console.log('QR Data:', qrData);
+    console.log("QR Data:", qrData);
   };
 
   return (
@@ -44,30 +47,45 @@ const CustomForm = () => {
       <h2>Formulario Personalizado</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Nombre del Cliente:</label>
-          <input type="text" value={formData.clientName} readOnly />
+          <label>Nombre del Cliente: {formData.clientName}</label>
         </div>
         <div>
-          <label>Saldo de la Cuenta:</label>
-          <input type="number" value={formData.accountBalance} readOnly />
+          <label> Tipo de Cuenta: {formData.cuenta}</label>
         </div>
         <div>
-          <label>Tipo de Formulario:</label>
-          <select value={formData.formType} onChange={handleFormTypeChange} required>
-            <option value="">Seleccione un tipo de formulario</option>
-            <option value="inmobiliaria">Inmobiliaria</option>
-            <option value="personal">Personal</option>
-            {/* Agrega más tipos de formulario según sea necesario */}
-          </select>
+          <label>Saldo de la Cuenta: {formData.accountBalance}</label>
+        </div>
+
+        <div>
+          {/* este cambia dependiendo del tipo de plantilla si es negocio 
+          le pide que digite el nombre de su negocio, si es personal no pide nada 
+          si es inmoviliaria le pide el nombre de la emoresa  */}
+
+          <label>Nombre Del Qr</label>
+          <input type="text" name=""></input>
+        </div>
+        <div>
+          {/* pide direccion dependiento del tipo de formulario si es personal no pide */}
+          <label>Direccion</label>
+          <input type="text" name=""></input>
+        </div>
+
+        <div>
+          <label for="imagen">Selecciona una imagen:</label>
+          <input type="file" id="imagen" name="imagen" accept="image/*"></input>
         </div>
         <div>
           <label>Tipo de Precio:</label>
-          <select value={formData.priceType} onChange={handlePriceTypeChange} required>
+          <select
+            value={formData.priceType}
+            onChange={handlePriceTypeChange}
+            required
+          >
             <option value="fixed">Fijo</option>
             <option value="indefinite">Indefinido</option>
           </select>
         </div>
-        {formData.priceType === 'fixed' && (
+        {formData.priceType === "fixed" && (
           <div>
             <label>Precio Fijo:</label>
             <input

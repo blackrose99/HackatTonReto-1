@@ -85,7 +85,7 @@
   }
 
   #reducir{
-    background-color: #000 ;
+    background-color: #fff ;
   }
   .grande {
     font-size: x-large; /* Tamaño de fuente "extra grande" */
@@ -117,4 +117,11 @@
 .borde{
   border-bottom-right-radius: 50%;
 }
+
+#colorTotal {
+  background-image: url('ImgUniversal/logoCoomultrasan.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-repeat: repeat; /* Hacer que la imagen de fondo se repita */
+  animation: desvanecer 4s ease-in-out infinite;
+}
+
   
