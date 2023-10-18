@@ -56,3 +56,13 @@
     color: #5f9750; /* Cambia el color a verde al pasar el ratón */
     font-weight: bold;
   }
+  .arrow{
+    font-size: 20px;
+    color: #96bd0d;
+  }
+
+  .gray-text {
+    color: gray;
+    font-size: larger;
+  }
+  
