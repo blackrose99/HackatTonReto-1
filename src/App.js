@@ -9,7 +9,7 @@ import Home from "./UniversalCompontes/Home";
 import formQrPago from "./EntityComponentes/User/formQrPago";
 
 //Importar el Componente que muestra la imformacion de un Cliente 
-import ClientInfo from "./EntityComponentes/Cliente/clienteInfo";
+import ClientInfo from "./EntityComponentes/Cliente/Cliente";
 
 //Importar el Componete que permite a la Entidad Admistrar los Cliente
 import clienteList from "./EntityComponentes/Entidad/clientesList";
@@ -35,7 +35,8 @@ function App() {
             {/* Rura para mostrar la imformacion de un cleinte */}
             <Route path="/cliente/:id" element={<ClientInfo />} />
 
-
+            {/* Ruta del componente Cliente */}
+            
 
           </Routes>
         </div>
