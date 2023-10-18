@@ -21,6 +21,7 @@
   .header-nav li {
     display: inline; /* Hace que los elementos de la lista se muestren en línea */
     margin-right: 20px; /* Espaciado entre elementos de la lista */
+    
   }
   
   .header-nav a {
