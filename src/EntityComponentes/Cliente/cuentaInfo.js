@@ -1,35 +1,26 @@
 import React, { useState, useEffect } from "react";
 
 const CuentaInfo = ({ cuentaId }) => {
-    // Uso de useState (Hook de estado) dentro de las constantes cuentaData y loading
     const [cuentaData, setCuentaData] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    // Simular una solicitud para obtener la información de la cuenta por su ID
+    // Datos quemados para este ejemplo
+    const datosQuemados = {
+        name: "Nombre del Cliente",
+        documentId: "123456789",
+        email: "cliente@example.com",
+        phone: "123-456-7890",
+        ciudad: "Ciudad del Cliente",
+        direccion: "Dirección del Cliente",
+        estadoCuenta: "Activa",
+    };
+
     useEffect(() => {
-        // Simulación de datos para este ejemplo:
-        const fetchData = async () => {
-            try {
-                // Simulación de una solicitud a la API o base de datos.
-                // Reemplaza esta parte con tu lógica real.
-
-                // Supongamos que obtienes la información del cliente por su cuentaId
-                const response = await fetch(`/api/cliente/${cuentaId}`);
-                if (response.ok) {
-                    const data = await response.json();
-                    setCuentaData(data);
-                } else {
-                    // Manejo de errores si la solicitud no fue exitosa
-                    console.error("Error al obtener los datos del cliente.");
-                }
-                setLoading(false);
-            } catch (error) {
-                // Manejo de errores en la solicitud
-                console.error("Error en la solicitud: ", error);
-            }
-        };
-
-        fetchData();
+        // Simulación de carga de datos
+        setTimeout(() => {
+            setCuentaData(datosQuemados);
+            setLoading(false);
+        }, 1000); // Simula una carga de datos durante 1 segundo
     }, [cuentaId]);
 
     return (
