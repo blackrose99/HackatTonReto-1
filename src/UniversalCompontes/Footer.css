@@ -11,6 +11,10 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Agrega una sombra */
     margin: 10px 0; /* Ajusta el margen superior e inferior a tu preferencia */
   }
+
+  .zoncontact{
+    margin-left: 20px;
+  }
   
   .contact-item {
     display: flex;
@@ -61,6 +65,7 @@
 
   }
 
+
   .card-body >form > input{
       width: 100%;
   }
@@ -87,6 +92,10 @@
   .card-body > form > label {
     color: #545454;
     font-weight: 700;
+  }
+
+  .card{
+    width: 90%;
   }
   .footer-contact a {
     display: block;
