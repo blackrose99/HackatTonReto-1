@@ -42,9 +42,15 @@ const ClientInfo = ({ clientId }) => {
       <p><strong>Nombre:</strong> {clientData.name}</p>
       <p><strong>Documento de Identidad:</strong> {clientData.documentId}</p>
       <p><strong>Correo Electrónico:</strong> {clientData.email}</p>
-      <p><strong>Número de Contacto:</strong> {clientData.phone}</p>
+      <p><strong>Número de Teléfono:</strong> {clientData.phone}</p>
+      <p><strong>Ciudad: {clientData.ciudad}</strong></p>
+      <p><strong>Dirección: {clientData.direccion}</strong></p>
+      <p><strong>Estado de la cuenta: {clientData.estadoCuenta}</strong></p>
+
       {/* Mostrar más detalles según sea necesario */}
     </div>
+
+    
   );
 };
 
