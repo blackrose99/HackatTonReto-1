@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import InfoClient from './infoclient'; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
+
 import { useParams } from "react-router-dom";
 
 const ClientInfo = () => {
@@ -35,6 +36,7 @@ const ClientInfo = () => {
 
   return (
     <>
+
       <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
       {/* Mostrar más detalles según sea necesario */}
     </>
