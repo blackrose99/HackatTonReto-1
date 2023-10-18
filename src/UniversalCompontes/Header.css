@@ -1,9 +1,9 @@
 /* header.css */
 
 /* Estilo para el contenedor del encabezado */
-.header-container {
+#colorBarra {
     background-color: #333; /* Color de fondo del encabezado */
-    color: #93c323; /* Color de texto en el encabezado */
+    color: #006567; /* Color de texto en el encabezado */
     padding: 20px; /* Espaciado interior del encabezado */
   }
   
@@ -27,7 +27,7 @@
   
   .header-nav a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #c3d3c9; /* Color de texto en los enlaces de navegación */
+    color: #96bd0d; /* Color de texto en los enlaces de navegación */
   }
   
   /* Cambiar el color de los enlaces cuando se desplaza el cursor sobre ellos */

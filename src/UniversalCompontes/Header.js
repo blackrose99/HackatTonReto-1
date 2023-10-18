@@ -1,7 +1,7 @@
 import React from 'react';
 
-import "./Header.css"
-import ImagenDeBanco from '../UniversalCompontes/ImgUniversal/imagen01hyjpg.jpg';
+import "../UniversalCompontes/Header.css"
+
 
 
 
@@ -11,7 +11,7 @@ const Header = ({ entityName, userName, userRole }) => {
     <div>
     <header>
     
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" id='colorBarra'>
         <div className="container">
           
           <a className="navbar-brand" href="/">Nombre de tu Cooperativa</a>
@@ -29,10 +29,10 @@ const Header = ({ entityName, userName, userRole }) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">Inicio</a>
+                <a className="nav-link" href="/">Mis QRs</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/entidad">Panel de Entidad</a>
+                <a className="nav-link" href="/entidad">Nuevo Formulario</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/usuario">Panel de Usuario</a>
@@ -40,9 +40,9 @@ const Header = ({ entityName, userName, userRole }) => {
             </ul>
           </div>
           <div className="user-info">
-            <p className="entity-name">Entidad: {entityName}</p>
-            <p className="user-name">Usuario: {userName}</p>
-            <p className="user-role">Rol: {userRole}</p>
+            <p className="entity-name">Iniciar Sesión: {entityName}</p>
+            {/* <p className="user-name">Usuario: {userName}</p>
+            <p className="user-role">Rol: {userRole}</p> */}
           </div>
         </div>
       </nav>
