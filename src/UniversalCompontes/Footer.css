@@ -65,12 +65,9 @@
 
   }
 
-<<<<<<< HEAD
   .card{
     border: none;
   }
-=======
->>>>>>> df43156c2bbc41b20023bf720c6a5aef88c878fa
 
   .card-body >form > input{
       width: 100%;
