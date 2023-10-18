@@ -1,13 +1,19 @@
 import React from "react";
-//Importar Footer 
+//Importar Header
+import Header from "./Header";
 
+//Importar Home.css
 import "./Home.css";
+
+//Importar Footer 
 import Footer from "./Footer";
+
+
 
 function Home() {
     return (
         <div>
-
+            <Header />
             <div className="diseñoHome">
 
                 <h1>Bienvenido a nuestra página de inicio</h1>
