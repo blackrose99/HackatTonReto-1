@@ -19,9 +19,9 @@ import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
 
 function App() {
   return (
-    <div className="">
+    <div className="" id="borde">
       <BrowserRouter>
-        <div className="container-fluid">
+        <div class="container-fluid" id="borde">
           <Routes>
             {/* Ruta para cargar pagina de inico en la ruta / */}
             <Route path="/" element={<Home />} />

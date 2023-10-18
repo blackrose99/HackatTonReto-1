@@ -47,3 +47,6 @@ body {
     transform: rotate(360deg);
   }
 }
+#borde {
+  border-bottom-right-radius: 50%;
+}

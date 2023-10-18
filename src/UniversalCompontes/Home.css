@@ -60,3 +60,26 @@
     }
 
 }
+
+.diseñoHome {
+    max-width: 100%; /* El contenedor se reducirá a medida que la pantalla se hace más pequeña */
+    transition: all 0.3s; /* Aplicar una transición suave durante 0.3 segundos */
+  }
+  
+  /* Ajusta el tamaño de texto para que se haga más pequeño a medida que el contenedor se reduce */
+  #textos {
+    text-align: center;
+    padding: 20px;
+    transition: font-size 0.3s; /* Aplicar una transición suave al tamaño del texto */
+  }
+  
+  @media (max-width: 768px) {
+    .diseñoHome {
+      max-width: 80%; /* Reducir el ancho máximo cuando el tamaño de la pantalla es menor */
+    }
+  
+    #textos {
+      font-size: 80%; /* Reducir el tamaño del texto en pantallas más pequeñas */
+    }
+  }
+  
