@@ -4,8 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 //Importar Home
 import Home from "./UniversalCompontes/Home";
-//Importar Footer 
-import Footer from "./UniversalCompontes/Footer";
 
 //Importar Formulario de pago con el codigo Qr
 import formQrPago from "./EntityComponentes/User/formQrPago";
@@ -26,7 +24,7 @@ function App() {
 
           </Routes>
         </div>
-        <Footer/>
+        
       </BrowserRouter>
     </div>
   );
