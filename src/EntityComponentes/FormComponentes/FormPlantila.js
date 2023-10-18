@@ -25,6 +25,17 @@ const CustomForm = () => {
     setFormData({ ...formData, customPrice: e.target.value });
   };
 
+  const handleIncludeExpirationChange = (e) => {
+    const value = e.target.value;
+    const expirationDateTime =
+      value === "No" ? "" : formData.expirationDateTime;
+    setFormData({ ...formData, includeExpiration: value, expirationDateTime });
+  };
+
+  const handleExpirationDateTimeChange = (e) => {
+    setFormData({ ...formData, expirationDateTime: e.target.value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -52,11 +63,8 @@ const CustomForm = () => {
       <div className="container-fluid form-container">
         <div className="row">
           <div className="col-lg">
-            
             <form onSubmit={handleSubmit} className="form-wrapper">
-            <h2 class="form-title">
-              Formulario Personalizado
-            </h2>
+              <h2 class="form-title">Formulario Personalizado</h2>
               <div>
                 <label className="form-label">
                   <b>Nombre del Cliente:</b> {formData.clientName}
@@ -64,21 +72,25 @@ const CustomForm = () => {
               </div>
               <div>
                 <label className="form-label">
-                <b>Tipo de Cuenta:</b> {formData.cuenta}
+                  <b>Tipo de Cuenta:</b> {formData.cuenta}
                 </label>
               </div>
 
               <div>
-                <label className="form-label"><b>Nombre Del Qr:</b></label>
+                <label className="form-label">
+                  <b>Nombre Del Qr:</b>
+                </label>
                 <input type="text" name="" className="form-input"></input>
               </div>
               <div>
-                <label className="form-label"><b>Direccion:</b></label>
+                <label className="form-label">
+                  <b>Direccion:</b>
+                </label>
                 <input type="text" name="" className="form-input"></input>
               </div>
               <div>
                 <label for="imagen" className="form-label">
-                <b>Si desea puede cargar una imagen:</b>
+                  <b>Si desea puede cargar una imagen:</b>
                 </label>
                 <input
                   type="file"
@@ -89,7 +101,9 @@ const CustomForm = () => {
                 ></input>
               </div>
               <div>
-                <label className="form-label"><b>Tipo de Precio:</b></label>
+                <label className="form-label">
+                  <b>Tipo de Precio:</b>
+                </label>
                 <select
                   value={formData.priceType}
                   onChange={handlePriceTypeChange}
@@ -102,7 +116,9 @@ const CustomForm = () => {
               </div>
               {formData.priceType === "fixed" && (
                 <div>
-                  <label className="form-label"><b>Precio Fijo:</b></label>
+                  <label className="form-label">
+                    <b>Precio Fijo:</b>
+                  </label>
                   <input
                     type="number"
                     value={formData.customPrice}
@@ -112,34 +128,62 @@ const CustomForm = () => {
                   />
                 </div>
               )}
+              <div>
+                <label className="form-label">
+                  <b>¿Desea incluir caducidad al QR?</b>
+                </label>
+                <select
+                  value={formData.includeExpiration}
+                  onChange={handleIncludeExpirationChange}
+                  required
+                  className="form-input center-select"
+                >
+                  <option value="Si">Si</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              {formData.includeExpiration === "Si" && (
+                <div>
+                  <label className="form-label">
+                    <b>Fecha y Hora de Caducidad:</b>
+                  </label>
+                  <input
+                    type="datetime-local"
+                    value={formData.expirationDateTime}
+                    onChange={handleExpirationDateTimeChange}
+                    required
+                    className="form-input"
+                  />
+                </div>
+              )}
+
               <div className="center-button mt-3">
-              <div type="submit" class="button" data-tooltip="Size: 20Mb">
-                <div class="button-wrapper">
-                  <div class="text">Generar QR</div>
-                  <span class="icon">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                      role="img"
-                      width="2em"
-                      height="2em"
-                      preserveAspectRatio="xMidYMid meet"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
-                      ></path>
-                    </svg>
-                  </span>
+                <div type="submit" class="button" data-tooltip="Size: 20Mb">
+                  <div class="button-wrapper">
+                    <div class="text">Generar QR</div>
+                    <span class="icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                        role="img"
+                        width="2em"
+                        height="2em"
+                        preserveAspectRatio="xMidYMid meet"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
                 </div>
               </div>
-              </div>
-              
             </form>
           </div>
         </div>
