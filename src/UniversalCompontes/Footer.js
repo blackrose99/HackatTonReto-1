@@ -57,10 +57,19 @@ function Footer() {
           </div>
           <div className="col-lg-3">
             <div className="footer-contact">
-              <h2>Contacto</h2>
-              <p>Dirección: Dirección de la entidad cooperativa</p>
-              <p>Teléfono: +123 456 789</p>
-              <p>Email: info@coopbanco.com</p>
+              <h2 className="bold-text">ACCESOS RÁPIDOS</h2>
+              <a href="#" class="accesoRapido">Ley 2300 de 2023</a>
+              <a href="#" class="accesoRapido">Balance social</a>
+              <a href="#" class="accesoRapido">Blog</a>
+              <a href="#" class="accesoRapido">Seguridad financiera</a>
+              <a href="#" class="accesoRapido">Tasas y tarifas</a>
+              <a href="#" class="accesoRapido">Reglamento crédito</a>
+              <a href="#" class="accesoRapido">Preguntas frecuentes</a>
+              <a href="#" class="accesoRapido">Asamblea</a>
+              <a href="#" class="accesoRapido">Consumidor financiero</a>
+              <a href="#" class="accesoRapido">Inscripción Comunidad Empresarial</a>
+              <a href="#" class="accesoRapido">Repositorio COVID-19</a>
+              <a href="#" class="accesoRapido">Alianza Fondo Nacional de Garantías</a>
             </div>
           </div>
           <div className="col-lg-3">
