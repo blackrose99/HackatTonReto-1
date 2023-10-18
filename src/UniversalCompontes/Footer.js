@@ -85,7 +85,34 @@ function Footer() {
             </div>
           </div>
           <div className="col-lg-3">
+          <div class="card">
+            <div class="formsub">
+              <p>Trabaje con Nosotros@</p>
+            </div>
+            <div class="card-body">
+              <form>
+                  <label>SUSCRIBETE AL BOLETIN</label>
+                 <input type="text" placeholder="Escribe aqui tu correo" ></input>
 
+                 <button>Enviar</button>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+          <div className="col-lg siguenos">
+            <p>SÍGUENOS EN</p>
+          </div>
+        </div>
+        <div class="row">
+          <div className="col-lg redesSociales">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-instagram-alt' ></i>
+            <i class='bx bxl-youtube' ></i>
+            <i class='bx bxl-linkedin-square' ></i>
+            <i class='bx bxl-tiktok' ></i>
           </div>
         </div>
       </div>

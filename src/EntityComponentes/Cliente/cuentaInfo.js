@@ -6,7 +6,7 @@ const CuentaInfo = ({ cuentaId }) => {
 
     // Datos quemados para este ejemplo
     const datosQuemados = {
-        name: "Nombre del Cliente",
+        name: "",
         documentId: "123456789",
         email: "cliente@example.com",
         phone: "123-456-7890",
