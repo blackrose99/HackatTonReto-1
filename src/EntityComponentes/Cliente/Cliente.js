@@ -26,7 +26,7 @@ const ClientInfo = () => {
       try {
         // Simular una solicitud a la API o la base de datos.
         // Reemplaza esta parte con tu lógica real.
-        const response = await fetch(`http://192.168.1.15:5000/api/users/${id}`);
+        const response = await fetch(`http://192.168.4.15:5000/api/users/${id}`);
         const data = await response.json();
         setClientData(data);
         setLoading(false);
