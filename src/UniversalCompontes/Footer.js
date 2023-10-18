@@ -85,7 +85,19 @@ function Footer() {
             </div>
           </div>
           <div className="col-lg-3">
+          <div class="card">
+            <div class="formsub">
+              <p>Trabaje con Nosotros@</p>
+            </div>
+            <div class="card-body">
+              <form>
+                  <label>SUSCRIBETE AL BOLETIN</label>
+                 <input type="text" placeholder="Escribe aqui tu correo" ></input>
 
+                 <button>Enviar</button>
+              </form>
+            </div>
+          </div>
           </div>
         </div>
         <div class="row">
