@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import HeaderCliente from "./HeaderCliente";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ClientInfo = ({ clientId }) => {
   const [clientData, setClientData] = useState(null);
@@ -38,6 +40,8 @@ const ClientInfo = ({ clientId }) => {
 
   return (
     <div>
+      <HeaderCliente/>
+
       <h2>Información del Cliente</h2>
       <p><strong>Nombre:</strong> {clientData.name}</p>
       <p><strong>Documento de Identidad:</strong> {clientData.documentId}</p>
@@ -48,6 +52,9 @@ const ClientInfo = ({ clientId }) => {
       <p><strong>Estado de la cuenta: {clientData.estadoCuenta}</strong></p>
 
       {/* Mostrar más detalles según sea necesario */}
+      <Link to="/crearQr" className="btn btn-info mt-3 mb-5">
+          ← Crear Codigo Qr
+        </Link>
     </div>
 
     
