@@ -4,12 +4,12 @@ import ImagenDeLogoCoomultrasan from '../UniversalCompontes/ImgUniversal/logoCoo
 
 const Header = ({ entityName, userName, userRole }) => {
   return (
-    <div>
+    <div id='reducir'>
       <header >
         <div className="header-container-fluid" id='colorTotal'>
           <nav className="navbar navbar-expand-lg navbar-light container-fluid" id='colorBarra'>
             <div className="container" id='colorBarra'>
-              <a className="navbar-brand" href="/" id='texto'>Nombre de tu Cooperativa</a>
+              <a className="navbar-brand grande" href="/" id='texto'>Nombre de tu Cooperativa</a>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -34,10 +34,10 @@ const Header = ({ entityName, userName, userRole }) => {
                   </li>
                 </ul>
               </div>
-              <div className="user-info">
+              <div className="user-info custom-user-info">
                 <p className="entity-name" id='texto'>Iniciar Sesión: {entityName}</p>
-                {/* <p className="user-name">Usuario: {userName}</p>
-                <p className="user-role">Rol: {userRole}</p> */}
+                {/* <p className="user-name" id='texto'>Usuario: {userName}</p>
+                <p className="user-role" id='texto'>Rol: {userRole}</p> */}
               </div>
             </div>
           </nav>
