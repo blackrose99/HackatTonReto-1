@@ -1,5 +1,7 @@
 import React from "react";
 //Importar Footer 
+
+import "./Home.css";
 import Footer from "./Footer";
 
 function Home() {
