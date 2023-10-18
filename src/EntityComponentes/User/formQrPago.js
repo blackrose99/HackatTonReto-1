@@ -1,4 +1,11 @@
+import React from "react";
+import ImagenDeBanco from '../img-entityComponentes/imagen01hyjpg.jpg';
 
-// import ImagenDeBanco from "../img-entityComponentes/imagen01hyjpg.jpg";
 
-// <img className="imgBanck" src={ImagenDeBanco} />
+function formQrPago() {
+    return (
+        <div>
+            <img className="imgBanck" src={ImagenDeBanco} />
+        </div>
+    )
+}
