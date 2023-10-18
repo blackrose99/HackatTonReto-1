@@ -24,14 +24,14 @@ const Header = ({ entityName, userName, userRole }) => {
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
                     <div className="nav-content">
-                      <h4><a className="nav-link" href="/" id='texto'>Mis QRs</a></h4>
+                      <h2 className='frase'>Creando sueños desde 1962 </h2>
                     </div>
                   </li>
                   <li className="nav-item">
-                    <h4><a className="nav-link" href="/entidad" id='texto'>Formularios</a></h4>
+                    <h4><a className="nav-link" href="/entidad" id='texto'>Sobre nosotros</a></h4>
                   </li>
                   <li className="nav-item">
-                    <h4><a className="nav-link" href="/usuario" id='texto'>Panel de Usuario</a></h4>
+                    <h4><a className="nav-link" href="/usuario" id='texto'>Unete a nuestro Equipo</a></h4>
                   </li>
                   <li>
                     <Link to="/login-cliente" className="navbar-brand">

@@ -34,7 +34,7 @@ export function InfoClient({ data }) {
 
     return (
         <div>
-        <Header/>
+        
        <div className="datosCliente">
             <div className="datosinter">
                 <h2>Información del Cliente</h2>
