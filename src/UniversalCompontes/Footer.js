@@ -41,26 +41,47 @@ function Footer() {
               <div className="contact-info">
                 <p className="bold-text">Edificio Administrativo</p>
                 <p className="right-text">Calle 35 # 16-43
-                Paseo del Comercio
-                NIT 804-009-752-8
-                Bucaramanga</p>
+                  Paseo del Comercio
+                  NIT 804-009-752-8
+                  Bucaramanga</p>
               </div>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="footer-info">
-              <h2>Nuestra Cooperativa de Banco</h2>
-              <p>
-                Somos una entidad cooperativa comprometida con nuestros socios y la comunidad. Brindamos servicios financieros y soluciones bancarias que hacen la diferencia.
-              </p>
+              <h2 className="titulosFooter">Puntos de Contacto</h2>
+              {/* Lista de enlaces */}
+              <ul className="list-unstyled">
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Escribenos</a>
+                </li>
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Visitanos</a>
+                </li>
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Linea WhatsApp</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="footer-contact">
-              <h2>Contacto</h2>
-              <p>Dirección: Dirección de la entidad cooperativa</p>
-              <p>Teléfono: +123 456 789</p>
-              <p>Email: info@coopbanco.com</p>
+              <h2 className="bold-text titulosFooter">ACCESOS RÁPIDOS</h2>
+              <a href="#" class="accesoRapido">Ley 2300 de 2023</a>
+              <a href="#" class="accesoRapido">Balance social</a>
+              <a href="#" class="accesoRapido">Blog</a>
+              <a href="#" class="accesoRapido">Seguridad financiera</a>
+              <a href="#" class="accesoRapido">Tasas y tarifas</a>
+              <a href="#" class="accesoRapido">Reglamento crédito</a>
+              <a href="#" class="accesoRapido">Preguntas frecuentes</a>
+              <a href="#" class="accesoRapido">Asamblea</a>
+              <a href="#" class="accesoRapido">Consumidor financiero</a>
+              <a href="#" class="accesoRapido">Inscripción Comunidad Empresarial</a>
+              <a href="#" class="accesoRapido">Repositorio COVID-19</a>
+              <a href="#" class="accesoRapido">Alianza Fondo Nacional de Garantías</a>
             </div>
           </div>
           <div className="col-lg-3">
@@ -88,4 +109,3 @@ function Footer() {
 }
 
 export default Footer;
-
