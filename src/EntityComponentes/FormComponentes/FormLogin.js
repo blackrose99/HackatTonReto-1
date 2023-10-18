@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Importa Link y useLocation
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -22,6 +24,7 @@ const Login = () => {
 
   return (
     <div>
+     
       <h2>Iniciar Sesión</h2>
       <form onSubmit={handleSubmit}>
         <div>
@@ -43,6 +46,9 @@ const Login = () => {
           />
         </div>
         <button type="submit">Iniciar Sesión</button>
+        <Link to="/" className="navbar-brand">
+                  <h4 className="btn btn-primary">Cancelar</h4>
+                </Link>
       </form>
       {errorMessage && <p className="error-message">{errorMessage}</p>}
     </div>

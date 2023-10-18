@@ -14,6 +14,9 @@ import ClientInfo from "./EntityComponentes/Cliente/Cliente";
 //Importar el Componete que permite a la Entidad Admistrar los Cliente
 import clienteList from "./EntityComponentes/Entidad/clientesList";
 
+//Importar el Formulario Login
+import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
+
 function App() {
   return (
     <div className="">
@@ -36,6 +39,10 @@ function App() {
             <Route path="/cliente/:id" element={<ClientInfo />} />
 
             {/* Ruta del componente Cliente */}
+
+            {/* Ruta para llamar el formulario del cliente  */}
+            <Route path="/login-cliente" element={<FormLogin />} />
+
             
 
           </Routes>
