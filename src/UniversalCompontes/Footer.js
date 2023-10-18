@@ -49,7 +49,7 @@ function Footer() {
           </div>
           <div className="col-lg-3">
             <div className="footer-info">
-              <h2 className="bold-text">Puntos de Contacto</h2>
+              <h2 className="titulosFooter">Puntos de Contacto</h2>
               {/* Lista de enlaces */}
               <ul className="list-unstyled">
                 <li>
@@ -69,7 +69,7 @@ function Footer() {
           </div>
           <div className="col-lg-3">
             <div className="footer-contact">
-              <h2 className="bold-text">ACCESOS RÁPIDOS</h2>
+              <h2 className="bold-text titulosFooter">ACCESOS RÁPIDOS</h2>
               <a href="#" class="accesoRapido">Ley 2300 de 2023</a>
               <a href="#" class="accesoRapido">Balance social</a>
               <a href="#" class="accesoRapido">Blog</a>

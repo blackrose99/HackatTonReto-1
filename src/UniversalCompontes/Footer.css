@@ -53,7 +53,7 @@
   }
   
   .footer-contact a:hover {
-    color: #5f9750; /* Cambia el color a verde al pasar el ratón */
+    color: #93c323; /* Cambia el color a verde al pasar el ratón */
     font-weight: bold;
   }
   .arrow{
@@ -64,5 +64,11 @@
   .gray-text {
     color: gray;
     font-size: larger;
+  }
+
+  .titulosFooter{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
   }
   
