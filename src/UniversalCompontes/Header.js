@@ -1,6 +1,8 @@
 import React from 'react';
 import '../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
+import { Link, useLocation } from 'react-router-dom'; // Importa Link y useLocation
+
 
 const Header = ({ entityName, userName, userRole }) => {
   return (
@@ -32,6 +34,14 @@ const Header = ({ entityName, userName, userRole }) => {
                   <li className="nav-item">
                     <a className="nav-link" href="/usuario" id='texto'>Panel de Usuario</a>
                   </li>
+
+                  <li>
+                  <Link to="/login-cliente" className="navbar-brand">
+                  <h4 className="btn btn-primary">Iniciar Sesión</h4>
+                </Link>
+                  </li>
+
+
                 </ul>
               </div>
         
