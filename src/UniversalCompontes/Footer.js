@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "./Footer.css"
 import React from "react";
 
@@ -34,6 +33,3 @@ function Footer() {
 }
 
 export default Footer;
-=======
-import "./Footer.css"
->>>>>>> 26f02693f5056758d84129ee039e9781c3deefa8
