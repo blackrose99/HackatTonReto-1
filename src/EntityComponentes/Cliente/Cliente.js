@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const ClientInfo = () => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
+  const [infoData, setInfoData ] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
