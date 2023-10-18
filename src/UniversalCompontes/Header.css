@@ -68,6 +68,7 @@
   }
   #colorBarra{
     background-color: #96bd0d;
+    border-bottom-right-radius: 50%;
   }
 
   .custom-user-info {
@@ -84,7 +85,7 @@
   }
 
   #reducir{
-    background-color: #000 ;
+    background-color: #fff ;
   }
   .grande {
     font-size: x-large; /* Tamaño de fuente "extra grande" */
@@ -107,5 +108,20 @@
   color: #041817;
 }
 
+.imagen-qr {
+  max-width: 100%; /* La imagen se reducirá a medida que el contenedor se haga más pequeño */
+  height: auto; /* Mantiene la relación de aspecto original */
+}
+
+
+.borde{
+  border-bottom-right-radius: 50%;
+}
+
+#colorTotal {
+  background-image: url('ImgUniversal/logoCoomultrasan.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
+  background-repeat: repeat; /* Hacer que la imagen de fondo se repita */
+  animation: desvanecer 4s ease-in-out infinite;
+}
 
   

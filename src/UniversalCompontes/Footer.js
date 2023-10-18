@@ -10,7 +10,7 @@ function Footer() {
     <footer>
       <div className="container-fluid">
         <hr></hr>
-        <div className="row">
+        <div className="row zoncontact">
           <div className="col-lg-3 datosContactos">
             <div className="contact-item">
               <i class='bx bx-user-circle'></i>
@@ -88,7 +88,7 @@ function Footer() {
               <a href="#">Alianza Fondo Nacional de Garantías</a>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 zonform">
           <div class="card">
             <div class="formsub">
               <p>Trabaje con Nosotros@</p>
