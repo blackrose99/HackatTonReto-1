@@ -1,0 +1,20 @@
+.datosContactos {
+    display: flex; /* Activa el modelo de caja flexible */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.datosContactos i {
+    font-size: 40px; /* Ajusta el tamaño del icono según tus preferencias */
+    margin-right: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Establece la dirección de flexbox a columna para apilar los párrafos verticalmente */
+    margin-top: 0; /* Elimina el margen superior para eliminar el espacio entre los párrafos */
+}
+
+.bold-text {
+    font-weight: bold; /* Establece el texto en negrita */
+    margin-bottom: -10px; /* Establece un margen inferior negativo para superponer los párrafos */
+  }

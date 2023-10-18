@@ -21,7 +21,7 @@ function Home() {
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 mb-2">
                         <div class="diseñoHome">
                             <div id="textos">
                                 <h1>Bienvenido a nuestra página de inicio</h1>
