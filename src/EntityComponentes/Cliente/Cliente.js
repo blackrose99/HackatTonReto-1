@@ -35,6 +35,7 @@ const ClientInfo = () => {
 
   return (
     <>
+    
       <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
       {/* Mostrar más detalles según sea necesario */}
     </>
