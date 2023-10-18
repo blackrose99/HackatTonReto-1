@@ -52,7 +52,7 @@ const ClientInfo = () => {
     <>
     <div>
 
-      <CuentaInfo/>
+      <ClientInfo data={clientData}/>
 
       {/* Mostrar más detalles según sea necesario */}
 

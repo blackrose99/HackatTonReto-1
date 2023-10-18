@@ -1,6 +1,6 @@
 import React from "react";
 
-export function InfoClient() {
+export function InfoClient({data}) {
     // Supongamos que tienes un objeto clientData con la información del cliente
     const clientData = {
         name: "Nombre del Cliente",
@@ -10,8 +10,10 @@ export function InfoClient() {
         ciudad: "Ciudad del Cliente",
         direccion: "Dirección del Cliente",
         estadoCuenta: "Activa",
+        
     };
 
+    console.log(data);
     return (
         <div>
             <h2>Información del Cliente</h2>
