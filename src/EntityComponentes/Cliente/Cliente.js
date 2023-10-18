@@ -1,24 +1,25 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import InfoClient from './infoclient'; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
+import InfoClient from "./infoclient"; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
 
-import HeaderCliente from './HeaderCliente';
+import HeaderCliente from "./HeaderCliente";
 const ClientInfo = () => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
-  const [infoData, setInfoData ] = useState(null);
+  const [infoData, setInfoData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://192.168.4.15:5000/api/users/${id}`);
+        const response = await fetch(
+          `http://192.168.4.15:5000/api/users/${id}`
+        );
         const data = await response.json();
         setClientData(data);
         setLoading(false);
       } catch (error) {
-        console.error('Error al obtener datos del cliente', error);
+        console.error("Error al obtener datos del cliente", error);
         setLoading(false);
       }
     };
@@ -36,15 +37,9 @@ const ClientInfo = () => {
 
   return (
     <di>
-            <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
-            <HeaderCliente data={clientData} /> {/* */}
-
-
-
+      <HeaderCliente data={clientData} /> 
+      <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
     </di>
-    
-
-
   );
 };
 
