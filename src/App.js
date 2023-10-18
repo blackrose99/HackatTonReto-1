@@ -13,7 +13,8 @@ import ClientInfo from "./EntityComponentes/Cliente/Cliente";
 
 //Importar el Componete que permite a la Entidad Admistrar los Cliente
 import clienteList from "./EntityComponentes/Entidad/clientesList";
-
+//Importar formulario de tipo de cuenta y tipo de plantilla
+import TypeFormTypeCount from "./EntityComponentes/FormComponentes/FormTipoCuentaTipoForm";
 //Importar el Formulario Login
 import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
 
@@ -42,6 +43,10 @@ function App() {
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />
+
+            {/* Ruta para mostrar el tipo de plantilla y tipo de cuenta */}
+            <Route path="/form-tipo-plantilla-cuenta" element={<TypeFormTypeCount/>}> </Route>
+            
 
             
 

@@ -1,0 +1,45 @@
+/* Estilos específicos para CombinedForm */
+.combined-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.combined-form-title {
+  font-size: 1.5rem;
+}
+
+.combined-form-label {
+  display: block;
+  margin-top: 10px;
+}
+
+.combined-form-select, .combined-form-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 768px) {
+  .combined-form-container {
+    padding: 10px;
+  }
+
+  .combined-form-title {
+    font-size: 1.2rem;
+  }
+
+  .combined-form-label {
+    margin-top: 5px;
+    
+  }
+
+  .combined-form-select, .combined-form-button {
+    padding: 8px;
+  }
+}
+combined-form-container{
+    background-color: aquamarine;
+}
