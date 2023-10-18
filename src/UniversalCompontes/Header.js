@@ -1,7 +1,6 @@
 import React from 'react';
 import '../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
-import ImagenDeQR from '../UniversalCompontes/ImgUniversal/codigo-qr.png';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = ({ entityName, userName, userRole }) => {
