@@ -42,4 +42,13 @@
   .right-text {
     text-align: left; /* Alinea el texto a la derecha */
   }
+  .arrow{
+    font-size: 20px;
+    color: #96bd0d;
+  }
+
+  .gray-text {
+    color: gray;
+    font-size: larger;
+  }
   

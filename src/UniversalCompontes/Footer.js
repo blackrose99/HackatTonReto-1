@@ -41,18 +41,30 @@ function Footer() {
               <div className="contact-info">
                 <p className="bold-text">Edificio Administrativo</p>
                 <p className="right-text">Calle 35 # 16-43
-                Paseo del Comercio
-                NIT 804-009-752-8
-                Bucaramanga</p>
+                  Paseo del Comercio
+                  NIT 804-009-752-8
+                  Bucaramanga</p>
               </div>
             </div>
           </div>
           <div className="col-lg-3">
             <div className="footer-info">
-              <h2>Nuestra Cooperativa de Banco</h2>
-              <p>
-                Somos una entidad cooperativa comprometida con nuestros socios y la comunidad. Brindamos servicios financieros y soluciones bancarias que hacen la diferencia.
-              </p>
+              <h2 className="bold-text">Puntos de Contacto</h2>
+              {/* Lista de enlaces */}
+              <ul className="list-unstyled">
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Escribenos</a>
+                </li>
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Visitanos</a>
+                </li>
+                <li>
+                <i class='bx bxs-right-arrow arrow'></i>
+                  <a href="#" className="gray-text">Linea WhatsApp</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="col-lg-3">
