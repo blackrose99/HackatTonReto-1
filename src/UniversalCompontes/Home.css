@@ -59,3 +59,19 @@
       
     }
 }
+.diseñoHome {
+    max-width: 100%; /* La imagen no superará su ancho original */
+    height: auto; /* Mantendrá la relación de aspecto original */
+  }
+
+@media (max-width: 768px) {
+    .diseñoHome {
+      max-width: 50%; /* Ajusta el ancho de la imagen al 50% cuando la pantalla es más pequeña que 768px */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .diseñoHome {
+      max-width: 30%; /* Ajusta el ancho de la imagen al 30% cuando la pantalla es más pequeña que 480px */
+    }
+  }

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-function CuentaInfo() {
-    // Supongamos que tienes un objeto clientData con la información del cliente
-    const clientData = {
+const CuentaInfo = ({ cuentaId }) => {
+    const [cuentaData, setCuentaData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    // Datos quemados para este ejemplo
+    const datosQuemados = {
         name: "Nombre del Cliente",
         documentId: "123456789",
         email: "cliente@example.com",
@@ -12,18 +15,34 @@ function CuentaInfo() {
         estadoCuenta: "Activa",
     };
 
+    useEffect(() => {
+        // Simulación de carga de datos
+        setTimeout(() => {
+            setCuentaData(datosQuemados);
+            setLoading(false);
+        }, 1000); // Simula una carga de datos durante 1 segundo
+    }, [cuentaId]);
+
     return (
         <div>
-            <h2>Información del Cliente</h2>
-            <p><strong>Nombre:</strong> {clientData.name}</p>
-            <p><strong>Documento de Identidad:</strong> {clientData.documentId}</p>
-            <p><strong>Correo Electrónico:</strong> {clientData.email}</p>
-            <p><strong>Número de Teléfono:</strong> {clientData.phone}</p>
-            <p><strong>Ciudad:</strong> {clientData.ciudad}</p>
-            <p><strong>Dirección:</strong> {clientData.direccion}</p>
-            <p><strong>Estado de la cuenta:</strong> {clientData.estadoCuenta}</p>
+            {loading ? (
+                <p>Cargando...</p>
+            ) : cuentaData ? (
+                <div>
+                    <h2>Información del Cliente</h2>
+                    <p><strong>Nombre:</strong> {cuentaData.name}</p>
+                    <p><strong>Documento de Identidad:</strong> {cuentaData.documentId}</p>
+                    <p><strong>Correo Electrónico:</strong> {cuentaData.email}</p>
+                    <p><strong>Número de Teléfono:</strong> {cuentaData.phone}</p>
+                    <p><strong>Ciudad:</strong> {cuentaData.ciudad}</p>
+                    <p><strong>Dirección:</strong> {cuentaData.direccion}</p>
+                    <p><strong>Estado de la cuenta:</strong> {cuentaData.estadoCuenta}</p>
+                </div>
+            ) : (
+                <p>No se encontraron datos para esta cuenta.</p>
+            )}
         </div>
     );
-}
+};
 
 export default CuentaInfo;
