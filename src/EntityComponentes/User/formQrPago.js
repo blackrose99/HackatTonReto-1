@@ -1,5 +1,5 @@
 import React from "react";
-import ImagenDeBanco from '../img-entityComponentes/imagen01hyjpg.jpg';
+
 
 function FormQrPago() {
     return (

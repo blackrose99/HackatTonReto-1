@@ -1,0 +1,31 @@
+.diseñoHome {
+    background-color: #c3d3c9;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #93c323;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.diseñoHome h1 {
+    color: #0e5958;
+    font-size: 24px;
+}
+
+.diseñoHome p {
+    color: #545454;
+}
+
+.diseñoHome button {
+    background-color: #5f9750;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.diseñoHome button:hover {
+    background-color: #accc54;
+}
