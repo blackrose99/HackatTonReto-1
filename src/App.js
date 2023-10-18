@@ -20,9 +20,9 @@ import Plantila from "./EntityComponentes/FormComponentes/FormPlantila";
 
 function App() {
   return (
-    <div className="" id="borde">
+    <div id="borde">
       <BrowserRouter>
-        <div class="container-fluid" id="borde">
+        <div className="container-fluid" id="borde">
           <Routes>
             {/* Ruta para cargar pagina de inico en la ruta / */}
             <Route path="/" element={<Home />} />
@@ -38,8 +38,6 @@ function App() {
 
             {/* Rura para mostrar la imformacion de un cleinte */}
             <Route path="/cliente/:id" element={<ClientInfo />} />
-
-            {/* Ruta del componente Cliente */}
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />

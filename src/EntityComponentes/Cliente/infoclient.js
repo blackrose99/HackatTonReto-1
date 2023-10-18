@@ -26,8 +26,6 @@ export function InfoClient({ data }) {
             });
             setLoading(false); // Marca como no cargando una vez que se obtienen los datos
         }
-
-        console.log(data);
     }, [data]);
 
     if (loading) {
@@ -49,9 +47,7 @@ export function InfoClient({ data }) {
             </div>
         </div> 
         <Footer/>
-        </div>
-    
-        
+        </div>     
     );
 }
 
