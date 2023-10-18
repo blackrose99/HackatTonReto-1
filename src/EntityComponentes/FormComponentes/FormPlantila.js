@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../../EntityComponentes/Cliente/HeaderCliente";
+import Header from "../../UniversalCompontes/Header";
 import Footer from "../../UniversalCompontes/Footer";
 import "./FormPlantilla.css";
 
