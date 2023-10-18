@@ -16,6 +16,7 @@ import clienteList from "./EntityComponentes/Entidad/clientesList";
 
 //Importar el Formulario Login
 import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
+import Plantila from "./EntityComponentes/FormComponentes/FormPlantila";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />
+            <Route path="/plantilla" element={<Plantila/>} />
 
             
 
