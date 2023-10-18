@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -32,11 +31,7 @@ const HeaderCliente = ({ entityName, userName, userRole }) => {
                   <li className="nav-item">
                     <h4><a className="nav-link" href="/usuario" id='texto'>Panel de Usuario</a></h4>
                   </li>
-                  <li>
-                    <Link to="/login-cliente" className="navbar-brand">
-                      <h4 className="iniciar">Iniciar Sesión</h4>
-                    </Link>
-                  </li>
+    
                 </ul>
               </div>
             </div>
