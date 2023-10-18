@@ -66,9 +66,27 @@
     font-size: larger;
   }
 
-  .titulosFooter{
+  .titulosFooter, .siguenos{
     font-size: 25px;
     text-transform: uppercase;
     font-weight: bold;
+  }
+  
+  .siguenos, .redesSociales {
+    display: flex; /* Activa el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 100%; /* Ajusta la altura para centrar verticalmente los elementos en las filas */
+  }
+
+  .redesSociales i {
+    font-size: 40px; /* Ajusta el tamaño de los iconos según tus preferencias */
+    margin: 0 10px; /* Añade espacio entre los iconos */
+    color: #93c323; /* Color de los iconos */
+    transition: color 0.2s; /* Agrega una transición de color al pasar el mouse */
+  }
+  
+  .redesSociales i:hover {
+    color: #0e5958; /* Cambia el color de los iconos al pasar el mouse */
   }
   

@@ -88,6 +88,21 @@ function Footer() {
 
           </div>
         </div>
+        <div class="row">
+          <div className="col-lg siguenos">
+            <p>SÍGUENOS EN</p>
+          </div>
+        </div>
+        <div class="row">
+          <div className="col-lg redesSociales">
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-twitter' ></i>
+            <i class='bx bxl-instagram-alt' ></i>
+            <i class='bx bxl-youtube' ></i>
+            <i class='bx bxl-linkedin-square' ></i>
+            <i class='bx bxl-tiktok' ></i>
+          </div>
+        </div>
       </div>
       <div className="text-center mt-4">
         <p>&copy; {new Date().getFullYear()} Cooperativa de Banco. Todos los derechos reservados.</p>
