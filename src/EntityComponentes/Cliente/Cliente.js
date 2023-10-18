@@ -4,11 +4,13 @@ import React, { useState, useEffect } from 'react';
 import HeaderCliente from "./HeaderCliente";
 
 //Importaciones del Componente CuentaInfo
-import CuentaInfo from './cuentaInfo';
+
 
 import { Link, useNavigate, useParams } from "react-router-dom";
+import CuentaInfo from './cuentaInfo'
 
-const ClientInfo = ({ clientId }) => {
+const ClientInfo = () => {
+  const { id } = useParams();
   const [clientData, setClientData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -20,13 +22,15 @@ const ClientInfo = ({ clientId }) => {
 
     // Simulación de datos para este ejemplo:
     const fetchData = async () => {
+      console.log(id)
       try {
         // Simular una solicitud a la API o la base de datos.
         // Reemplaza esta parte con tu lógica real.
-        const response = await fetch(`/api/client/${clientId}`);
+        const response = await fetch(`http://localhost:5000/api/users/${id}`);
         const data = await response.json();
         setClientData(data);
         setLoading(false);
+        console.log(data)
       } catch (error) {
         console.error('Error al obtener datos del cliente', error);
         setLoading(false);
@@ -34,7 +38,7 @@ const ClientInfo = ({ clientId }) => {
     };
 
     fetchData();
-  }, [clientId]);
+  }, []);
 
   if (loading) {
     return <p>Cargando la información del cliente...</p>;
@@ -45,16 +49,15 @@ const ClientInfo = ({ clientId }) => {
   }
 
   return (
+    <>
     <div>
-      <HeaderCliente/>
+
       <CuentaInfo/>
 
       {/* Mostrar más detalles según sea necesario */}
-      <Link to="/crearQr" className="btn btn-info mt-3 mb-5">
-          ← Crear Codigo Qr
-        </Link>
-    </div>
 
+    </div>
+    </>
     
   );
 };
