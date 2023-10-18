@@ -47,19 +47,11 @@ const Header = ({ entityName, userName, userRole }) => {
                   </li>
                 </ul>
               </div>
-<<<<<<< HEAD
 
                 <p className="entity-name" id='texto'>Iniciar Sesión: {entityName}</p>
                 {/* <p className="user-name" id='texto'>Usuario: {userName}</p>
                 <p className="user-role" id='texto'>Rol: {userRole}</p> */}
 
-=======
-              <div className="user-info custom-user-info">
-                <Link to="/login-cliente" className="navbar-brand">
-                  <h4 className="btn btn-primary">Iniciar Sesión</h4>
-                </Link>
-              </div>
->>>>>>> c6eb59e852eafb4fc9f8a5796cceab0685ad4811
             </div>
           </nav>
           <img
