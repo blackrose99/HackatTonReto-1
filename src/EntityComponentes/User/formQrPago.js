@@ -13,7 +13,8 @@ function FormularioDePagos() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
+    alert("pago exitoso");
+    window.location.href="/"
     // Aquí puedes realizar la lógica de envío del formulario
     // Por ejemplo, puedes enviar los datos al servidor o realizar otras acciones.
 
@@ -27,7 +28,7 @@ function FormularioDePagos() {
   return (
     <div className='pagePagos'>
     <div className="FormularioDePagos">
-      <h1>Formulario de Pago</h1>
+      <h1>Pago para <b>Juan Perez</b></h1>
       <form onSubmit={handleFormSubmit}>
        
 
@@ -57,7 +58,8 @@ function FormularioDePagos() {
           type="number"
           id="valor"
           name="valor"
-          value={valor}
+          value="50000"
+          readOnly
           onChange={(e) => setValor(e.target.value)}
           required
         />
@@ -92,7 +94,7 @@ function FormularioDePagos() {
         </div>
         
 
-        <button type="submit">Pagar</button>
+        <button >Pagar</button>
       </form>
     </div>
     </div>
