@@ -41,14 +41,16 @@ export function InfoCuenta({ data }) {
                                 <th scope="col">Número de cuenta</th>
                                 <th scope="col">Saldo de cuenta</th>
                                 <th scope="col">Tipo de cuenta</th>
+                                <th scope="col">Estado de cuenta</th>
                             </tr>
                         </thead>
                         <tbody>
                             {cuentaInfo.UsersAccounts.map((cuenta, index) => (
                                 <tr key={index}>
-                                    <td>{cuenta.AccountId}</td>
-                                    <td>{cuenta.balance}</td>
+                                    <td># {cuenta.AccountId}</td>
+                                    <td>$ {cuenta.balance}</td>
                                     <td>{cuenta.Account.TypesAccount.name}</td>
+                                    <td>{cuenta.Account.status ? 'Activa' : 'Inactiva'}</td>
                                 </tr>
                             ))}
                         </tbody>

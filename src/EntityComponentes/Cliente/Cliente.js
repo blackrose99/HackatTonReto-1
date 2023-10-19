@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import InfoClient from "./infoclient"; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
+import InfoClient from "./InfoClient"; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
 import HeaderCliente from "./HeaderCliente";
 import InfoQr from './InfoQr'
 import InfoCuenta from './InfoCuenta'
@@ -50,4 +50,4 @@ const ClientInfo = ({localhost}) => {
   );
 };
 
-export default ClientInfo;
+export default ClientInfo;

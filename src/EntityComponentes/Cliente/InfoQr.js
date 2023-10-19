@@ -2,15 +2,19 @@ import React, { useState, useEffect } from "react";
 
 export function InfoQr({ data }) {
   const [QrInfo, setQrInfo] = useState({
-    image: "",
+    qrs: [],
     transactions: []
   })
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     if (data) {
-      setQrInfo({
+      /*var qrs;
+      for(usersAccounts : data.UsersAccounts) {
 
-        image: data.BankId || "123",
+      }*/
+
+      setQrInfo({
+        qrs: data.UsersAccounts || [],
         transactions: [],
       });
       setLoading(false); // Marca como no cargando una vez que se obtienen los datos
@@ -25,7 +29,21 @@ export function InfoQr({ data }) {
   return (
     <div>
       <h1>Listado de Qrs</h1>
-      <h1>{QrInfo.image}</h1>
+
+      <table className="table">
+        <thead>
+        <tr>
+          <th scope="col">Número de cuenta</th>
+        </tr>
+        </thead>
+        <tbody>
+        {QrInfo.qrs.map((qr, index) => (
+            <tr key={index}>
+              <td># {qr.balance}</td>
+            </tr>
+        ))}
+        </tbody>
+      </table>
     </div>
   );
 }

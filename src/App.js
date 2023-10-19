@@ -23,6 +23,10 @@ import { useState } from 'react'
 
 function App() {
   const [localhost, setLocalhost] = useState("http://localhost:5000")
+  const [accounts, setAccounts] = useState()
+  const Setaccounts = (date) => {
+    setAccounts(date)
+  }
   return (
     <div id="borde">
       <BrowserRouter>
@@ -45,10 +49,10 @@ function App() {
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />
-            <Route path="/plantilla/:id" element={<Plantila localhost={localhost}/>} />
+            <Route path="/plantilla/:id" element={<Plantila localhost={localhost} accounts={accounts}/>} />
 
             {/* Ruta para mostrar el tipo de plantilla y tipo de cuenta */}
-            <Route path="/form-tipo/:id" element={<TypeFormTypeCount localhost={localhost} />}> </Route>
+            <Route path="/form-tipo/:id" element={<TypeFormTypeCount localhost={localhost} Setaccounts={setAccounts} />}> </Route>
             
 
             
