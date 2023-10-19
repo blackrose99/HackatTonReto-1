@@ -25,6 +25,7 @@ function FormularioDePagos() {
   };
 
   return (
+    <div className='pagePagos'>
     <div className="FormularioDePagos">
       <h1>Formulario de Pago</h1>
       <form onSubmit={handleFormSubmit}>
@@ -71,6 +72,7 @@ function FormularioDePagos() {
               checked={metodoPago === 'PSE'}
               onChange={() => setMetodoPago('PSE')}
               required
+              className='radio'
             />
             PSE
           </label>
@@ -83,13 +85,16 @@ function FormularioDePagos() {
               checked={metodoPago === 'FC'}
               onChange={() => setMetodoPago('FC')}
               required
+              className='radio'
             />
             FC
           </label>
         </div>
+        
 
         <button type="submit">Pagar</button>
       </form>
+    </div>
     </div>
   );
 }
