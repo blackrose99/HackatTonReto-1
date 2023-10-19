@@ -46,7 +46,7 @@ function App() {
             <Route path="/financiera" element={<clienteList/>} />
 
             {/* Ruta de lo que va a ver el usuario final para pagar con Qr */}
-            <Route path="/form-pago" element={ <FormQrPago/>} />
+            <Route path="/form-pago/:id" element={ <FormQrPago/>} />
 
             
             <Route path="/user" element={<formQrPago/>} /> 
