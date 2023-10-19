@@ -12,13 +12,18 @@ import FormQrPago from "./EntityComponentes/User/formQrPago";
 import ClientInfo from "./EntityComponentes/Cliente/Cliente";
 
 //Importar el Componete que permite a la Entidad Admistrar los Cliente
-import ClienteList from "./EntityComponentes/Entidad/Entidad";
+import ClienteList from "./EntityComponentes/Entidad/clientesList";
+
 //Importar formulario de tipo de cuenta y tipo de plantilla
 import TypeFormTypeCount from "./EntityComponentes/FormComponentes/FormTipoCuentaTipoForm";
-//Importar el Formulario Login
 
-import CodigoQr from "./EntityComponentes/User/CodigoQr";
+//Importar el Formulario Login
 import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
+
+//
+import CodigoQr from "./EntityComponentes/User/CodigoQr";
+
+//
 import Plantila from "./EntityComponentes/FormComponentes/FormPlantila";
 import { useState } from 'react'
 

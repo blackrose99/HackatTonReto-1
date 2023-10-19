@@ -4,7 +4,7 @@ const EntityClientManagement = () => {
   const [clients, setClients] = useState([]); // Lista de clientes
   const [loading, setLoading] = useState(true);
 
-// Simulación de obtener la lista de clientes desde el servidor
+  // Simulación de obtener la lista de clientes desde el servidor
   useEffect(() => {
     // Realiza una solicitud al servidor o utiliza datos de la base de datos
     // para obtener la lista de clientes.
@@ -57,7 +57,7 @@ const EntityClientManagement = () => {
             <th>Límite de Creación QR</th>
           </tr>
         </thead>
-   <tbody>
+        <tbody>
           {clients.map((client) => (
             <tr key={client.id}>
               <td>{client.name}</td>
