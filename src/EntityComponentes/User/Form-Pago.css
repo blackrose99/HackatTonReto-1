@@ -1,5 +1,18 @@
 /* Estilos para el formulario */
+
+.pagePagos {
+  width: 100%;
+  height: 100dvh;
+  background-image: url("./ImagePagos/FondoPagos.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .FormularioDePagos {
+    width: 400px;
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -10,6 +23,8 @@
   }
   
   .FormularioDePagos h1 {
+    color: #0e5958;
+    font-weight: 700;
     font-size: 24px;
     text-align: center;
   }
@@ -20,6 +35,7 @@
   }
   
   .FormularioDePagos label {
+    color: #aaaaaa;
     margin: 10px 0;
   }
   
@@ -29,11 +45,12 @@
   .FormularioDePagos button {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: none;
+    border-bottom: 2px solid #aaaaaa;
+    outline: none;
     font-size: 16px;
   }
-  
+
   /* Estilos para los radio buttons */
   .FormularioDePagos .metodo-pago label {
     display: flex;
@@ -41,6 +58,7 @@
   }
   
   .FormularioDePagos .metodo-pago input[type="radio"] {
+    
     margin-right: 5px;
   }
   
@@ -49,13 +67,19 @@
   }
   
   .FormularioDePagos button {
-    background-color: #007bff;
+    background-color: #0e5958;
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
   }
   
+
   .FormularioDePagos button:hover {
-    background-color: #0056b3;
+    background-color:#5f9750;
   }
+
+ .radio:checked{
+  background-color: #0e5958;
+
+ }
   
