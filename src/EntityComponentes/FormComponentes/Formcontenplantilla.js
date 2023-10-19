@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Formcontenplantilla = ({Name,FormData,localhost,id}) => {
     const [formData, setFormData] = useState(FormData)
@@ -32,33 +34,39 @@ const Formcontenplantilla = ({Name,FormData,localhost,id}) => {
         setFormData({ ...formData, includeExpiration: value, expirationDateTime })
     }
 
-    const handleExpirationDateTimeChange = (e) => {
-        const handleUpdateData = () => {
+    const handleExpirationDateTimeChange = () => {
+        const idAccounts = window.localStorage.getItem('board');
+        const data = {
+            UsersAccountsId: idAccounts,
+            TypesFormsId: id,
+            name: 'financiera',
+        };
+
+        fetch(localhost+'/api/forms', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+          .then(response => {
+              if (response.ok) {
+                  return response.json();
+              } else {
+                  throw new Error('Error al realizar la solicitud POST');
+              }
+          })
+          .then(data => {
+              console.log('La solicitud POST se completó con éxito', data);
 
 
-            fetch(localhost+'/api/forms', {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json', // Ajusta el encabezado según sea necesario
-                },
-                body: JSON.stringify({ data: {UsersAccountsId:formData.UsersAccountsId} }), // Convierte los datos a JSON si es necesario
-            })
-                .then(response => {
-                    if (response.ok) {
-                        return response.json(); // Parsea la respuesta si se espera JSON
-                    } else {
-                        throw new Error('Error al realizar la solicitud PUT');
-                    }
-                })
-                .then(data => {
-                    console.log('La solicitud PUT se completó con éxito', data);
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        }
 
-    }
+          })
+          .catch(error => {
+              console.error(error);
+          });
+
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -132,9 +140,11 @@ const Formcontenplantilla = ({Name,FormData,localhost,id}) => {
                         )}
                         <div className="center-button mt-3">
                             <div type="submit" className="button" data-tooltip="Size: 20Mb">
+
                                 <div className="button-wrapper" onClick={handleExpirationDateTimeChange}>
-                                    <div className="text">Generar QR</div>
+                                    <div className="text"> <Link to={"/qr"}>Generar QR</Link></div>
                                     <span className="icon">
+<Link to={"/qr"}>
                       <svg
                           xmlns="http://www.w3.org/2000/svg"
                           aria-hidden="true"
@@ -153,6 +163,7 @@ const Formcontenplantilla = ({Name,FormData,localhost,id}) => {
                             d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
                         ></path>
                       </svg>
+    </Link>
                     </span>
                                 </div>
                             </div>

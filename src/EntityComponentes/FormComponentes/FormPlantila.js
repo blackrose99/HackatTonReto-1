@@ -29,7 +29,7 @@ const CustomForm = ({ localhost }) => {
     }
     return (
         <div>
-            <HeaderCliente/>
+           
             {formData && <Formcontenplantilla FormData={formData} Name={name} localhost={localhost} id={id}/>}
 
             <Footer/>
