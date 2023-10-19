@@ -1,0 +1,47 @@
+/* Estilo para centrar vertical y horizontalmente el texto "name:" */
+.nav-content p {
+    margin-right: 180px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .foto{
+    margin-left: -100px;
+  }
+
+  .nav-content{
+    text-align: center;
+  }
+
+  .navbar-nav{
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  }
+
+  .nav-item{
+    margin-left: 180px;
+    margin-right: 120px;
+  }
+
+  .iniciar{
+    background-color: #5f9750;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 250px;
+  }
+  
+  .iniciar:hover {
+    background-color: #accc54;
+  }
+
+  .LogoPerfil{
+    height: 100%;
+    width: 50px;
+  }
+
