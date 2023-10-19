@@ -1,0 +1,16 @@
+/* Clase para centrar un elemento */
+.centered {
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    align-items: center;
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  }
+  
+  /* Clase para aplicar sombreado a un elemento */
+  .shadowed {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
