@@ -12,7 +12,7 @@ import FormQrPago from "./EntityComponentes/User/formQrPago";
 import ClientInfo from "./EntityComponentes/Cliente/Cliente";
 
 //Importar el Componete que permite a la Entidad Admistrar los Cliente
-import clienteList from "./EntityComponentes/Entidad/clientesList";
+import ClienteList from "./EntityComponentes/Entidad/Entidad";
 //Importar formulario de tipo de cuenta y tipo de plantilla
 import TypeFormTypeCount from "./EntityComponentes/FormComponentes/FormTipoCuentaTipoForm";
 //Importar el Formulario Login
@@ -41,6 +41,7 @@ function App() {
 
             
             <Route path="/user" element={<formQrPago/>} /> 
+            <Route path="/entidad" element={<ClienteList/>}/> 
 
             {/* Rura para mostrar la imformacion de un cleinte */}
             <Route path="/cliente/:id" element={<ClientInfo localhost={localhost}/>} />
