@@ -44,7 +44,7 @@ const HeaderCliente = ({ entityName, userName, userRole, data }) => {
     <div id='reducir' className="borde">
       <header>
         <div className="header-container-fluid">
-          <nav className="navbar navbar-expand-lg navbar-light container-fluid" id="colorBarra">
+          <nav className="navbar navbar-expand-lg navbar-light container-fluid navHeaderCliente" id="colorBarra">
             <div className="container">
               <button
                 className="navbar-toggler"
@@ -58,13 +58,13 @@ const HeaderCliente = ({ entityName, userName, userRole, data }) => {
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                   <li className="nav-item">
-                    <div className="nav-content">
-                      <p className="foto"><img src={ImagenDeLogoPerfil} alt="Logo perfil" id="LogoPerfil" className="LogoPerfil" /> {clientInfo.name}</p>
+                    <div className="nav-content nombrePerson">
+                      <p className="nombrePerson"><img src={ImagenDeLogoPerfil} alt="Logo perfil" id="LogoPerfil" className="LogoPerfil" /> {clientInfo.name}</p>
                     </div>
                   </li>
                   <li className="nav-item ml-auto"> {/* Utiliza "ml-auto" para mantener "Mis Qrs" a la derecha */}
                     <Link to="/login-cliente" className="navbar-brand">
-                      <h4 className="iniciar">Cerrar Sesión</h4>
+                      <h4 className="iniciarSession">Cerrar Sesión</h4>
                     </Link>
                   </li>
                 </ul>
