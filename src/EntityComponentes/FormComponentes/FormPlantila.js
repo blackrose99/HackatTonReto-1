@@ -45,7 +45,7 @@ const CustomForm = () => {
     // Ejemplo: Generar un QR con la información seleccionada.
     const qrData = {
       clientName: formData.clientName,
-      clientName: formData.cuenta,
+      clientCuenta: formData.cuenta,
       accountBalance: formData.accountBalance,
       formType: formData.formType,
       priceType: formData.priceType,
@@ -64,7 +64,7 @@ const CustomForm = () => {
         <div className="row">
           <div className="col-lg">
             <form onSubmit={handleSubmit} className="form-wrapper">
-              <h2 class="form-title">Formulario Personalizado</h2>
+              <h2 className="form-title">Formulario Personalizado</h2>
               <div>
                 <label className="form-label">
                   <b>Nombre del Cliente:</b> {formData.clientName}
@@ -159,10 +159,10 @@ const CustomForm = () => {
               )}
 
               <div className="center-button mt-3">
-                <div type="submit" class="button" data-tooltip="Size: 20Mb">
-                  <div class="button-wrapper">
-                    <div class="text">Generar QR</div>
-                    <span class="icon">
+                <div type="submit" className="button" data-tooltip="Size: 20Mb">
+                  <div className="button-wrapper">
+                    <div className="text">Generar QR</div>
+                    <span className="icon">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         aria-hidden="true"
@@ -175,9 +175,9 @@ const CustomForm = () => {
                         <path
                           fill="none"
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"
                         ></path>
                       </svg>

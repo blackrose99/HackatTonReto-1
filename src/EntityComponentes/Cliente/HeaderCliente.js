@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 
 import '../../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
-import { Link, useLocation } from 'react-router-dom';
 
 const HeaderCliente = ({ entityName, userName, userRole,data}) => {
   const [clientInfo, setClientInfo] = useState({
