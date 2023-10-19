@@ -11,7 +11,7 @@ export function InfoCuenta({ data }) {
         phone: "",
         UsersAccounts: [],
     })
-    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         if (data) {
@@ -22,15 +22,13 @@ export function InfoCuenta({ data }) {
                 phone: data.phone || "",
                 UsersAccounts: data.UsersAccounts || [],
             });
-            setLoading(false); // Marca como no cargando una vez que se obtienen los datos
+
         }
 
         console.log(data);
     }, [data]);
 
-    if (loading) {
-        return <p>Cargando...</p>;
-    }
+
 
     return (
         <div>

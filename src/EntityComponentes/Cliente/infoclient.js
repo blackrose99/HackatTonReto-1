@@ -1,4 +1,5 @@
 import "./Cliente.css"
+
 import React, { useState, useEffect } from "react";
 
 export function InfoClient({ data }) {
@@ -10,7 +11,7 @@ export function InfoClient({ data }) {
         createdAt: "",
         updatedAt: "",
     });
-    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         if (data) {
@@ -22,13 +23,11 @@ export function InfoClient({ data }) {
                 createdAt: data.createdAt || "",
                 updatedAt: data.updatedAt || "",
             });
-            setLoading(false); // Marca como no cargando una vez que se obtienen los datos
+
         }
     }, [data]);
 
-    if (loading) {
-        return <p>Cargando...</p>;
-    }
+
 
     const formatearFecha = (cadenaTiempo) => {
         const fechaHora = new Date(cadenaTiempo);
@@ -65,6 +64,7 @@ export function InfoClient({ data }) {
                 <p><strong>Cuenta creada:</strong> {formatearFecha(clientInfo.createdAt)}</p>
                 <p><strong>Actualización:</strong> {formatearFecha(clientInfo.updatedAt)}</p>
             </div>
+
         </div>
         </div>     
     );

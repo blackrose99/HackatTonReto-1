@@ -4,13 +4,13 @@ import InfoClient from "./infoclient"; // Importa el componente InfoClient (aseg
 import HeaderCliente from "./HeaderCliente";
 import InfoQr from './InfoQr'
 import InfoCuenta from './InfoCuenta'
-import Header from '../../UniversalCompontes/Header'
 import Footer from '../../UniversalCompontes/Footer'
+
+
 const ClientInfo = ({localhost}) => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
-  const [cuentaData, setCuentaData ] = useState(null);
-  const [infoData, setInfoData] = useState(null);
+  const [cuentaData, setCuentaData] = useState()
   const [loading, setLoading] = useState(true);
   console.log(localhost)
   useEffect(() => {
@@ -21,7 +21,7 @@ const ClientInfo = ({localhost}) => {
         );
         const data = await response.json();
         setClientData(data);
-        setCuentaData(data);
+        setCuentaData(data)
         setLoading(false);
       } catch (error) {
         console.error("Error al obtener datos del cliente", error);
@@ -32,21 +32,17 @@ const ClientInfo = ({localhost}) => {
     fetchData();
   }, [id]);
 
-
   return (
 
     <div>
-      <Header />
-      {loading && <p>Cargando...</p>}
-      {!clientData && <p>o se encontró información para este cliente.</p>}
-      {!cuentaData && <p>No se encontró información para este cuenta.</p>}
-      <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
+      <HeaderCliente data={clientData}/>
+
+      {clientData ==null ? <p>Cargando...</p> : <InfoClient data={clientData} />} {/* Pasa los datos a InfoClient */}
       {/* Mostrar más detalles según sea necesario */}
-      <InfoCuenta data={cuentaData} />
-      <InfoQr data={cuentaData} />
+      {cuentaData ==null ? <p>Cargando...</p> : <InfoCuenta data={cuentaData} />}
+
       <Footer />
       </div>
-
   );
 };
 

@@ -48,7 +48,7 @@ function App() {
             <Route path="/plantilla" element={<Plantila/>} />
 
             {/* Ruta para mostrar el tipo de plantilla y tipo de cuenta */}
-            <Route path="/form-tipo-plantilla-cuenta" element={<TypeFormTypeCount/>}> </Route>
+            <Route path="/form-tipo" element={<TypeFormTypeCount/>}> </Route>
             
 
             

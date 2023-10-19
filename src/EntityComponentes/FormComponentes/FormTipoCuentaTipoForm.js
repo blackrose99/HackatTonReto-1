@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Header from "../../UniversalCompontes/Header";
 import Footer from "../../UniversalCompontes/Footer";
 import './FormTipoCuentaTipoForm.css';
+import { Link } from 'react-router-dom'; // Importa Link
+
+
 
 const CombinedForm = () => {
   const [accountTypes, setAccountTypes] = useState([]);
   const [formTypes, setFormTypes] = useState([]);
   const [selectedAccountType, setSelectedAccountType] = useState('');
   const [selectedFormType, setSelectedFormType] = useState('');
+
   
 
   // Simula obtener los tipos de cuentas desde la base de datos o una API.
@@ -40,6 +44,12 @@ const CombinedForm = () => {
 
   const handleFormTypeChange = (type) => {
     setSelectedFormType(type);
+  };
+  const handleNextClick = () => {
+    // Realiza cualquier otra lógica necesaria aquí
+
+    // Redirige al usuario a la página de plantilla ("/plantilla") cuando hace clic en "Siguiente"
+<Link to="/plantilla">Siguiente</Link>
   };
 
   return (
@@ -80,8 +90,12 @@ const CombinedForm = () => {
         </select>
       </div>
       {/* Resto del contenido del formulario */}
-      <button className="combined-form-button">Siguiente</button>
-    </div>
+      <Link to="/plantilla" className="combined-form-button">
+          <h2 className='btn btn-info'>
+          Siguiente
+          </h2>
+        </Link>
+            </div>
     <Footer />
     </div>
   );
