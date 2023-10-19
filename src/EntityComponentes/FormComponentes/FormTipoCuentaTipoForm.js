@@ -73,12 +73,12 @@ const CombinedForm = ({ localhost }) => {
         <label className="combined-form-label"><b>Selecciona tu cuenta:</b></label>
         <br></br>
           <select
-              className="combined-form-select"
+              className="combined-form-select selecFromTipoCuentaTipoForm"
               value={selectedAccountType}
               onChange={handleAccountTypeChange}
               required
           >
-            <option value="1">Seleccione un tipo de cuenta</option>
+            <option className='selecFromTipoCuentaTipoForm' value="1">Seleccione un tipo de cuenta</option>
             {accountTypes.map((account, index) => (
                 <option key={index} value={account.Account.id}>
                   # {account.Account.id} | {account.Account.TypesAccount.name}
@@ -89,14 +89,14 @@ const CombinedForm = ({ localhost }) => {
 
           </div>
   <div className="form-section">
-    <label className="combined-form-label"><b> Selecciona el Tipo de Formulario:</b></label>
+    <label className="combined-form-label "><b> Selecciona el Tipo de Formulario:</b></label>
     <br></br>
     <select
-        className="combined-form-select"
+        className="combined-form-select selecFromTipoCuentaTipoForm"
         value={selectedFormType}
         onChange={(e) => handleFormTypeChange(e.target.value)}
     >
-      <option value="">Seleccione un tipo de formulario</option>
+      <option className='selecFromTipoCuentaTipoForm' value="">Seleccione un tipo de formulario</option>
       {formTypes.map((form, index) => (
           <option key={index} value={form.id}>
             {form.name}
@@ -104,8 +104,9 @@ const CombinedForm = ({ localhost }) => {
       ))}
     </select>
   </div>
-  <Link to="/plantilla" className="combined-form-button">
-    <h2 className="btn btn-info">
+  <br/>
+  <Link to="/plantilla/1" className="combined-form-button">
+    <h2 className="btn btn-info btnSiguienteFormTipoCuentaTF">
       Siguiente
     </h2>
   </Link>

@@ -1,32 +1,20 @@
 .container2 {
-    border: 1px solid #ccc; /* Borde de 1 píxel con color gris claro */
-    box-shadow: 3px 3px 5px #888; /* Sombreado */
-    text-align: center; /* Centrado del contenido */
-    padding: 20px; /* Espaciado interno para separar el contenido del borde */
-    width: 28%; /* Ajusta el ancho de la caja según tus necesidades */
-    margin: 80px auto; /* Centra la caja horizontalmente */
-    border-radius: 10px;
-    -webkit-box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
-    -moz-box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
-    box-shadow: 10px 10px 12px 5px rgba(150,189,13,0.48);
-    color: #0e5958;
-    
-    
-  }
-  
-  .form-section {
-    margin: 10px 0; /* Espaciado entre secciones del formulario */
-  }
-  
-  .combined-form-title {
-    font-weight: bold;
-  }
-  
-  .combined-form-label {
-    /* Estilos para las etiquetas del formulario si es necesario */
-  }
-  
-  .combined-form-select {
-    /* Estilos para los selectores del formulario si es necesario */
-  }
-  
+  border: 1px solid #ccc;
+  box-shadow: 3px 3px 5px #888;
+  text-align: center;
+  padding: 20px;
+  max-width: 600px; /* Cambia el valor según tus necesidades */
+  width: 100%; /* Ancho del 100% para que sea responsive */
+  margin: 80px auto;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 12px 5px rgba(150, 189, 13, 0.48);
+  -moz-box-shadow: 10px 10px 12px 5px rgba(150, 189, 13, 0.48);
+  box-shadow: 10px 10px 12px 5px rgba(150, 189, 13, 0.48);
+  color: #0e5958;
+}
+
+.selecFromTipoCuentaTipoForm{
+  width: 90%;
+
+}
+
