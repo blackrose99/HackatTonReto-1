@@ -66,7 +66,7 @@ export function InfoClient({ data }) {
                 <p><strong>Actualización:</strong> {formatearFecha(clientInfo.updatedAt)}</p>
             </div>
         </div> 
-        <Footer/>
+
         </div>     
     );
 }

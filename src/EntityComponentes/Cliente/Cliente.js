@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import InfoClient from "./infoclient"; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
-
+import InfoClient from "./InfoClient"; // Importa el componente InfoClient (asegúrate de que la mayúscula inicial esté correcta)
 import HeaderCliente from "./HeaderCliente";
-const ClientInfo = () => {
+import InfoQr from './InfoQr'
+import InfoCuenta from './InfoCuenta'
+import Footer from '../../UniversalCompontes/Footer'
+
+
+const ClientInfo = ({localhost}) => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
-  const [cuentaData, setCuentaData ] = useState(null);
+  const [cuentaData, setCuentaData] = useState()
   const [loading, setLoading] = useState(true);
   console.log(localhost)
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://192.168.4.15:5000/api/users/${id}`
+          `${localhost}/api/users/${id}`
         );
         const data = await response.json();
         setClientData(data);
@@ -28,30 +32,18 @@ const ClientInfo = () => {
     fetchData();
   }, [id]);
 
-  if (loading) {
-    return <p>Cargando la información del cliente...</p>;
-  }
-
-  if (!clientData) {
-    return <p>No se encontró información para este cliente.</p>;
-  }
-
-  if (!cuentaData) {
-    return <p>No se encontró información para este cuenta.</p>;
-  }
   return (
-  
+
     <div>
-      
-      <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
-      {/* Mostrar más detalles según sea necesario */}
-      <InfoCuenta data={cuentaData} />
-    
-    
-      <HeaderCliente data={clientData} /> 
-      <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
+      <HeaderCliente data={clientData}/>
+
+      {clientData ==null ? <p>Cargando...</p> : <InfoClient data={clientData} />} 
+
+      {cuentaData ==null ? <p>Cargando...</p> : <InfoCuenta data={cuentaData} />}
+
+      <Footer />
       </div>
   );
 };
 
-export default ClientInfo;
+export default ClientInfo;
