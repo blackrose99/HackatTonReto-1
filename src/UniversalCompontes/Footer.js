@@ -13,35 +13,35 @@ function Footer() {
         <div className="row zoncontact">
           <div className="col-lg-3 datosContactos">
             <div className="contact-item">
-              <i class='bx bx-user-circle'></i>
+              <i className='bx bx-user-circle'></i>
               <div className="contact-info">
                 <p className="bold-text">CONTACT CENTER</p>
                 <p className="right-text">01 8000 938 088</p>
               </div>
             </div>
             <div className="contact-item">
-              <i class='bx bx-phone'></i>
+              <i className='bx bx-phone'></i>
               <div className="contact-info">
                 <p className="bold-text">EN BUCARAMANGA</p>
                 <p className="right-text">607 680 30 03</p>
               </div>
             </div>
             <div className="contact-item">
-              <i class='bx bxl-whatsapp'></i>
+              <i className='bx bxl-whatsapp'></i>
               <div className="contact-info">
                 <p className="bold-text">WHATSAPP</p>
                 <p className="right-text">310 751 8024</p>
               </div>
             </div>
             <div className="contact-item">
-              <i class='bx bx-list-check'></i>
+              <i className='bx bx-list-check'></i>
               <div className="contact-info">
                 <p className="bold-text">CONTINÚA CON LA</p>
                 <p className="right-text">firma de tus documentos</p>
               </div>
             </div>
             <div className="contact-item">
-              <i class='bx bx-map' ></i>
+              <i className='bx bx-map' ></i>
               <div className="contact-info">
                 <p className="bold-text">Edificio Administrativo</p>
                 <p className="right-text">Calle 35 # 16-43
@@ -57,15 +57,15 @@ function Footer() {
               {/* Lista de enlaces */}
               <ul className="list-unstyled">
                 <li>
-                <i class='bx bxs-right-arrow arrow'></i>
+                <i className='bx bxs-right-arrow arrow'></i>
                   <a href="#" className="gray-text">Escribenos</a>
                 </li>
                 <li>
-                <i class='bx bxs-right-arrow arrow'></i>
+                <i className='bx bxs-right-arrow arrow'></i>
                   <a href="#" className="gray-text">Visitanos</a>
                 </li>
                 <li>
-                <i class='bx bxs-right-arrow arrow'></i>
+                <i className='bx bxs-right-arrow arrow'></i>
                   <a href="#" className="gray-text">Linea WhatsApp</a>
                 </li>
               </ul>
@@ -89,11 +89,11 @@ function Footer() {
             </div>
           </div>
           <div className="col-lg-3 zonform">
-          <div class="card">
-            <div class="formsub">
+          <div className="card">
+            <div className="formsub">
               <p>Trabaje con Nosotros@</p>
             </div>
-            <div class="card-body">
+            <div className="card-body">
               <form>
                   <label>SUSCRIBETE AL BOLETIN</label>
                  <input type="text" placeholder="Escribe aqui tu correo" ></input>
@@ -104,27 +104,27 @@ function Footer() {
           </div>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           <div className="col-lg siguenos">
             <p>SÍGUENOS EN</p>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           <div className="col-lg redesSociales">
-            <i class='bx bxl-facebook-circle'></i>
-            <i class='bx bxl-twitter' ></i>
-            <i class='bx bxl-instagram-alt' ></i>
-            <i class='bx bxl-youtube' ></i>
-            <i class='bx bxl-linkedin-square' ></i>
-            <i class='bx bxl-tiktok' ></i>
+            <i className='bx bxl-facebook-circle'></i>
+            <i className='bx bxl-twitter' ></i>
+            <i className='bx bxl-instagram-alt' ></i>
+            <i className='bx bxl-youtube' ></i>
+            <i className='bx bxl-linkedin-square' ></i>
+            <i className='bx bxl-tiktok' ></i>
           </div>
         </div>
-        <div class="row mt-3">
+        <div className="row mt-3">
           <div className="col-lg finalFooter">
-            <div class="arriba">
+            <div className="arriba">
               <p>Ninguna parte del contenido de este sitio puede ser copiado, difundido o distribuido sin permiso expreso de Financiera Comultrasan. Derechos Reservados 2005-2023 / Bucaramanga, Santander, Colombia.</p>
             </div>
-            <div class="abajo">
+            <div className="abajo">
               <img src={ImagenDeFogacoop} alt="Logo Fogacoop" className="" />
               <img src={ImagenDesupersolidaria} alt="Logo supersolidaria" className="" />
             </div>

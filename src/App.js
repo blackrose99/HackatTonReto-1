@@ -18,8 +18,11 @@ import TypeFormTypeCount from "./EntityComponentes/FormComponentes/FormTipoCuent
 //Importar el Formulario Login
 import FormLogin from "./EntityComponentes/FormComponentes/FormLogin";
 import Plantila from "./EntityComponentes/FormComponentes/FormPlantila";
+import { useState } from 'react'
+
 
 function App() {
+  const [localhost, setLocalhost] = useState("http://localhost:5000")
   return (
     <div id="borde">
       <BrowserRouter>
@@ -38,7 +41,7 @@ function App() {
             {/* <Route path="/user" element={<formQrPago/>} /> */}
 
             {/* Rura para mostrar la imformacion de un cleinte */}
-            <Route path="/cliente/:id" element={<ClientInfo />} />
+            <Route path="/cliente/:id" element={<ClientInfo localhost={localhost}/>} />
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />

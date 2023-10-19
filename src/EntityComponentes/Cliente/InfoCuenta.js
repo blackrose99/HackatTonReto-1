@@ -3,7 +3,7 @@ import Header from "../../UniversalCompontes/Header";
 import Footer from "../../UniversalCompontes/Footer";
 
 export function InfoCuenta({ data }) {
-    console.log("Hola");
+
     const [cuentaInfo, setCuentaInfo] = useState({
         name: "",
         document: "",
@@ -34,7 +34,6 @@ export function InfoCuenta({ data }) {
 
     return (
         <div>
-            <Header />
             <div className="datosCliente">
                 <div className="datosinter">
                     <h2>Información del Cliente</h2>
@@ -64,7 +63,6 @@ export function InfoCuenta({ data }) {
 
                 </div>
             </div>
-            <Footer />
         </div>
 
 
