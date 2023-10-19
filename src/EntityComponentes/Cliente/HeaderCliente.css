@@ -1,0 +1,34 @@
+.iniciarSession {
+  position: absolute;
+  right: 10px; /* Puedes ajustar el valor según tus necesidades */
+  top: 10px; /* Esto lo coloca en la parte superior */
+  background-color: #5f9750;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+
+
+.navHeaderCliente{
+  height: 80px; 
+}
+
+.LogoPerfil{
+  height: 90px;
+  width: 100px;
+  justify-content: center;
+}
+
+.iniciarSession:hover {
+  background-color: #accc54;
+}
+
+.nombrePerson{
+  color: #fff;
+  font-size: 30px;
+}
