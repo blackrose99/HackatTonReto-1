@@ -104,7 +104,7 @@ const CombinedForm = ({ localhost }) => {
       ))}
     </select>
   </div>
-  <Link to="/plantilla" className="combined-form-button">
+  <Link to="/plantilla/1" className="combined-form-button">
     <h2 className="btn btn-info">
       Siguiente
     </h2>
