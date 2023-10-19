@@ -32,6 +32,7 @@ const CombinedForm = () => {
     const formTypesData = [
       { id: 1, name: 'Inmobiliaria' },
       { id: 2, name: 'Personal' },
+      { id: 3, name: 'Establecimiento' }
       // Agregar más tipos de formularios según sea necesario
     ];
 

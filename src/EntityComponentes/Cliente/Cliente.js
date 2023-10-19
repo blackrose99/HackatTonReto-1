@@ -6,11 +6,7 @@ import HeaderCliente from "./HeaderCliente";
 const ClientInfo = () => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
-<<<<<<< HEAD
   const [cuentaData, setCuentaData ] = useState(null);
-=======
-  const [infoData, setInfoData] = useState(null);
->>>>>>> 2f39eb41eaa9c6a906625de0cb467d2ece083d61
   const [loading, setLoading] = useState(true);
   console.log(localhost)
   useEffect(() => {
@@ -43,20 +39,17 @@ const ClientInfo = () => {
     return <p>No se encontró información para este cuenta.</p>;
   }
   return (
-<<<<<<< HEAD
   
     <div>
       
       <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
       {/* Mostrar más detalles según sea necesario */}
       <InfoCuenta data={cuentaData} />
-      </div>
-=======
-    <di>
+    
+    
       <HeaderCliente data={clientData} /> 
       <InfoClient data={clientData} /> {/* Pasa los datos a InfoClient */}
-    </di>
->>>>>>> 2f39eb41eaa9c6a906625de0cb467d2ece083d61
+      </div>
   );
 };
 
