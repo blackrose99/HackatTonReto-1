@@ -17,6 +17,7 @@ const ClientInfo = () => {
         );
         const data = await response.json();
         setClientData(data);
+        setCuentaData(data)
         setLoading(false);
       } catch (error) {
         console.error("Error al obtener datos del cliente", error);

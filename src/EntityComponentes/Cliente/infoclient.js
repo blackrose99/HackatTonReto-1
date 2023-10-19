@@ -12,7 +12,7 @@ export function InfoClient({ data }) {
         createdAt: "",
         updatedAt: "",
     });
-    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         if (data) {
@@ -24,13 +24,11 @@ export function InfoClient({ data }) {
                 createdAt: data.createdAt || "",
                 updatedAt: data.updatedAt || "",
             });
-            setLoading(false); // Marca como no cargando una vez que se obtienen los datos
+
         }
     }, [data]);
 
-    if (loading) {
-        return <p>Cargando...</p>;
-    }
+
 
     const formatearFecha = (cadenaTiempo) => {
         const fechaHora = new Date(cadenaTiempo);

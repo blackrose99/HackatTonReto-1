@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// ... (las otras importaciones)
+// Agregar Boton de (cerrar sesion) y centrar nombres
 
 import '../../UniversalCompontes/Header.css';
 import ImagenDeLogoCoomultrasan from '../../UniversalCompontes/ImgUniversal/logoCoomultrasan.png';
