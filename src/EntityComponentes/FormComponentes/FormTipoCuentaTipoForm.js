@@ -2,29 +2,40 @@ import React, { useState, useEffect } from 'react';
 import Header from "../../UniversalCompontes/Header";
 import Footer from "../../UniversalCompontes/Footer";
 import './FormTipoCuentaTipoForm.css';
-import { Link } from 'react-router-dom'; // Importa Link
+import { Link, useParams } from 'react-router-dom'
+import HeaderCliente from '../Cliente/HeaderCliente' // Importa Link
 
 
 
-const CombinedForm = () => {
+const CombinedForm = ({ localhost }) => {
   const [accountTypes, setAccountTypes] = useState([]);
   const [formTypes, setFormTypes] = useState([]);
   const [selectedAccountType, setSelectedAccountType] = useState('');
   const [selectedFormType, setSelectedFormType] = useState('');
+  const [cuentaData, setCuentaData] = useState()
+  const { id } = useParams();
 
-  
 
   // Simula obtener los tipos de cuentas desde la base de datos o una API.
   // Reemplaza esto con tu lógica real para obtener los tipos de cuentas.
   useEffect(() => {
-    const accountTypesData = [
-      { id: 1, name: 'Ahorro' },
-      { id: 2, name: 'Corriente' },
-      // Agregar más tipos de cuentas según sea necesario
-    ];
+    fetch(localhost+'/api/users/' + id)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok')
+          }
+          return response.json()
+        })
+        .then(data => {
+          setCuentaData(data)
 
-    setAccountTypes(accountTypesData);
-  }, []);
+        })
+    setAccountTypes(cuentaData.UsersAccounts.map
+
+      )
+  }, [id])
+
+
 
   // Simula obtener los tipos de formularios desde la base de datos o una API.
   // Reemplaza esto con tu lógica real para obtener los tipos de formularios.
@@ -55,26 +66,28 @@ const CombinedForm = () => {
 
   return (
     <div>
-      <Header />
-    <div class="container2 ">
+      <HeaderCliente />
+    <div className="container2 ">
       <h2 className="combined-form-title " >Seleccione el Tipo de Cuenta y el Tipo de Formulario</h2>
-      <div class="form-section col-lg">
+      <div className="form-section col-lg">
         <label className="combined-form-label"><b>Selecciona el Tipo de Cuenta:</b></label>
         <br></br>
         <select
-          className="combined-form-select"
-          value={selectedAccountType}
-          onChange={(e) => handleAccountTypeChange(e.target.value)}
+            className="combined-form-select"
+            value={selectedAccountType}
+            onChange={(e) => handleAccountTypeChange(e.target.value)}
         >
           <option value="">Seleccione un tipo de cuenta</option>
-          {accountTypes.map((type) => (
-            <option key={type.id} value={type.id}>
-              {type.name}
+            {cuentaData && cuentaData.UsersAccounts.map((Account, index) => (
+            <option key={index} value={Account.id}>
+                {Account.TypesAccount ? Account.TypesAccount.name : "Nombre no disponible"}
             </option>
-          ))}
+            ))}
         </select>
+
+
       </div>
-      <div class="form-section">
+      <div className="form-section">
         <label className="combined-form-label"><b> Selecciona el Tipo de Formulario:</b></label>
         <br></br>
         <select

@@ -46,7 +46,7 @@ export function InfoCuenta({ data }) {
                         <tbody>
                             {cuentaInfo.UsersAccounts.map((cuenta, index) => (
                                 <tr key={index}>
-                                    <td>{cuenta.id}</td>
+                                    <td>{cuenta.AccountId}</td>
                                     <td>{cuenta.balance}</td>
                                     <td>{cuenta.Account.TypesAccount.name}</td>
                                 </tr>

@@ -10,7 +10,8 @@ import Footer from '../../UniversalCompontes/Footer'
 const ClientInfo = ({localhost}) => {
   const { id } = useParams();
   const [clientData, setClientData] = useState(null);
-  const [cuentaData, setCuentaData] = useState()
+  const [cuentaData, setCuentaData] = useState(null);
+  const [qrData, setQraData] = useState(null);
   const [loading, setLoading] = useState(true);
   console.log(localhost)
   useEffect(() => {
@@ -21,7 +22,8 @@ const ClientInfo = ({localhost}) => {
         );
         const data = await response.json();
         setClientData(data);
-        setCuentaData(data)
+        setCuentaData(data);
+        setQraData(data);
         setLoading(false);
       } catch (error) {
         console.error("Error al obtener datos del cliente", error);
@@ -40,6 +42,8 @@ const ClientInfo = ({localhost}) => {
       {clientData ==null ? <p>Cargando...</p> : <InfoClient data={clientData} />} 
 
       {cuentaData ==null ? <p>Cargando...</p> : <InfoCuenta data={cuentaData} />}
+
+      {qrData ==null ? <p>Cargando...</p> : <InfoQr data={cuentaData} />}
 
       <Footer />
       </div>

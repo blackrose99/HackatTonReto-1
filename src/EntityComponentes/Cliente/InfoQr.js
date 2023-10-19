@@ -9,8 +9,9 @@ export function InfoQr({ data }) {
   useEffect(() => {
     if (data) {
       setQrInfo({
-        image: data.images || "",
-        transactions: data.UsersAccounts.Forms.Qrs.name || [],
+
+        image: data.BankId || "123",
+        transactions: [],
       });
       setLoading(false); // Marca como no cargando una vez que se obtienen los datos
     }
@@ -24,6 +25,7 @@ export function InfoQr({ data }) {
   return (
     <div>
       <h1>Listado de Qrs</h1>
+      <h1>{QrInfo.image}</h1>
     </div>
   );
 }

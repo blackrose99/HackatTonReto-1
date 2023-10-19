@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Importa Link y useLocation
+import { Link } from 'react-router-dom'; // Importa Link y useLocation
+import "./FormLogin.css";
+
+
 
 
 const Login = () => {
@@ -23,34 +26,52 @@ const Login = () => {
   };
 
   return (
-    <div>
-     
-      <h2>Iniciar Sesión</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Correo Electrónico</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Contraseña</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Iniciar Sesión</button>
-        <Link to="/" className="navbar-brand">
-                  <h4 className="btn btn-primary">Cancelar</h4>
-        </Link>
-      </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+    <div className='pageLogin'>
+      <div  className='Login'>
+      
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className='login_containers' >
+            <label  className='login_containers_label'>Correo Electrónico</label>
+          </div> 
+          <div  className='login_containers'> 
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className='login_containers_input'
+            />
+          </div>
+          <div className='login_containers'>
+            <label className='login_containers_label'>Contraseña</label>
+          </div>  
+          <div className='login_containers'>  
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className='login_containers_input'
+            />
+          </div>
+          <div className='login_containers_button'>
+          
+            <button type="submit" >
+              <Link to="/cliente/1"  className='linkbutn'>Sign In</Link>
+            </button>
+            
+          </div>
+          
+          <div className='login_containers'>  
+          <Link to="/" >
+            <h4 className="volver">Volver</h4>
+
+            </Link>
+          </div>
+        </form>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+      </div>
     </div>
   );
 };
