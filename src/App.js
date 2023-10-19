@@ -29,7 +29,7 @@ import { useState } from 'react'
 
 
 function App() {
-  const [localhost, setLocalhost] = useState("http://localhost:5000")
+  const [localhost, setLocalhost] = useState("http://20.20.20.80:5000")
   const [accounts, setAccounts] = useState()
   const Setaccounts = (date) => {
     setAccounts(date)
