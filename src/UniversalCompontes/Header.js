@@ -10,8 +10,7 @@ const Header = ({ entityName, userName, userRole }) => {
       <header>
         <div className="header-container-fluid" >
           <nav className="navbar navbar-expand-lg navbar-light container-fluid" id='colorBarra'>
-            <div className="container" id=''>
-              {/* <a className="navbar-brand grande" href="/" id='texto'>Nombre de tu Cooperativa</a> */}
+            <div className="container">
               <button
                 className="navbar-toggler"
                 type="button"
@@ -21,10 +20,10 @@ const Header = ({ entityName, userName, userRole }) => {
                 <span className="navbar-toggler-icon"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav ml-auto">
+                <ul className="navbar-nav">
                   <li className="nav-item">
                     <div className="nav-content">
-                      <h2 className='frase'>Creando sueños desde 1962 </h2>
+                      <h2 className='frase'>Creando Sueños Desde 1962 </h2>
                     </div>
                   </li>
                   <li className="nav-item">
@@ -34,7 +33,7 @@ const Header = ({ entityName, userName, userRole }) => {
                     <h4><a className="nav-link" href="/usuario" id='texto'>Unete a nuestro Equipo</a></h4>
                   </li>
                   <li>
-                    <Link to="/login-cliente" className="navbar-brand">
+                    <Link to="/login-cliente" className="navbar-brand btnIniciarSesion">
                       <h4 className="iniciar">Iniciar Sesión</h4>
                     </Link>
                   </li>

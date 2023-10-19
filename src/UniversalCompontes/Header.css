@@ -39,6 +39,8 @@
 #texto{
   color: #0e5958;
   font-weight: bold;
+  font-size: 18px;
+  margin-right: 30px;
 }
 
 
@@ -123,4 +125,17 @@ border-bottom-right-radius: 50%;
 background-image: url('ImgUniversal/logoCoomultrasan.png'); /* Reemplaza 'ruta/de/tu/imagen.jpg' con la ruta de tu imagen */
 background-repeat: repeat; /* Hacer que la imagen de fondo se repita */
 animation: desvanecer 4s ease-in-out infinite;
+}
+
+.frase {
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+  margin-right: 50px;
+  margin-top: 8px;
+}
+
+.btnIniciarSesion{
+  margin-top: -5px;
+  margin-left: 50px;
 }
