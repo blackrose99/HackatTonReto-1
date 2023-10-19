@@ -45,10 +45,10 @@ function App() {
 
             {/* Ruta para llamar el formulario del cliente  */}
             <Route path="/login-cliente" element={<FormLogin />} />
-            <Route path="/plantilla" element={<Plantila/>} />
+            <Route path="/plantilla/:id" element={<Plantila localhost={localhost}/>} />
 
             {/* Ruta para mostrar el tipo de plantilla y tipo de cuenta */}
-            <Route path="/form-tipo" element={<TypeFormTypeCount/>}> </Route>
+            <Route path="/form-tipo/:id" element={<TypeFormTypeCount localhost={localhost} />}> </Route>
             
 
             
