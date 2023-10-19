@@ -43,38 +43,40 @@ const HeaderCliente = ({ entityName, userName, userRole, data }) => {
   return (
     <div id='reducir' className="borde">
       <header>
-        <div className="header-container-fluid">
-          <nav className="navbar navbar-expand-lg navbar-light container-fluid navHeaderCliente" id="colorBarra">
-            <div className="container">
-              <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-              >
-                <span className="navbar-toggler-icon"></span>
-              </button>
+      <div className="header-container-fluid">
+  <nav className="navbar navbar-expand-lg navbar-light container-fluid navHeaderCliente" id="colorBarra">
+    <div className="container">
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item">
-                    <div className="nav-content nombrePerson">
-                      <p className="nombrePerson"><img src={ImagenDeLogoPerfil} alt="Logo perfil" id="LogoPerfil" className="LogoPerfil" /> {clientInfo.name}</p>
-                    </div>
-                  </li>
-                  <li className="nav-item ml-auto"> {/* Utiliza "ml-auto" para mantener "Mis Qrs" a la derecha */}
-                    <Link to="/login-cliente" className="navbar-brand">
-                      <h4 className="iniciarSession">Cerrar Sesión</h4>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <div className="nav-content nav-item">
+              <p className="nombrePerson"><img src={ImagenDeLogoPerfil} alt="Logo perfil" id="LogoPerfil" className="LogoPerfil nav" /> {clientInfo.name}</p>
             </div>
-          </nav>
-          <div id="colorTotal">
-            <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id="LogoImg" className="imagen-qr" />
-          </div>
-        </div>
+          </li>
+          <li className="nav-item">
+            <Link to="/login-cliente" className="navbar-brand btnIniciarSesion">
+              <h4 className="iniciarSession">Cerrar Sesión</h4>
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="colorTotal">
+    <img src={ImagenDeLogoCoomultrasan} alt="Logo Coomultrasan" id="LogoImg" className="imagen-qr" />
+  </div>
+</div>
+
 
       </header>
     </div>

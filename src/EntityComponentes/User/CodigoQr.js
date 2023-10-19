@@ -22,7 +22,7 @@ const CodigoQr = () => {
          <Header/>
     <div className="centered shadowed">
        
-      <h1>Nombre del QR:</h1>
+      <h1>QR de Juan Perez:</h1>
       <div className="shadowed"> {/* Aplica las clases CSS aquí */}
         <img src={qrBase64} alt="Código QR" width={450}/>
       </div>

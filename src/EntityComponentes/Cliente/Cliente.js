@@ -37,16 +37,33 @@ const ClientInfo = ({localhost}) => {
   return (
 
     <div>
-      <HeaderCliente data={clientData}/>
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="col-lg-12">
+            <HeaderCliente data={clientData}/>
+          </div>
+        </div>
 
-      {clientData ==null ? <p>Cargando...</p> : <InfoClient data={clientData} />} 
+        <div class="row justify-content-center mt-4 ml-5 mb-5">
+          <div class="col-lg-6">
+            {clientData ==null ? <p>Cargando...</p> : <InfoClient data={clientData} />}
+          </div>
 
-      {cuentaData ==null ? <p>Cargando...</p> : <InfoCuenta data={cuentaData} />}
+          <div class="col-lg-6">
+            {cuentaData ==null ? <p>Cargando...</p> : <InfoCuenta data={cuentaData} />}
+          </div>
+        </div>
 
-      {qrData ==null ? <p>Cargando...</p> : <InfoQr data={cuentaData} />}
+        <div class="row">
+          <div class="col-lg-12">
+            {qrData ==null ? <p>Cargando...</p> : <InfoQr data={cuentaData} />}
+          </div>
+        </div>
 
-      <Footer />
       </div>
+      
+      <Footer />
+    </div>
   );
 };
 
