@@ -1,6 +1,5 @@
 import "./Cliente.css"
 import Header from "../../UniversalCompontes/Header";
-import Footer from "../../UniversalCompontes/Footer";
 import React, { useState, useEffect } from "react";
 
 export function InfoClient({ data }) {
@@ -46,7 +45,7 @@ export function InfoClient({ data }) {
                 <p><strong>Actualización:</strong> {clientInfo.updatedAt}</p>
             </div>
         </div> 
-        <Footer/>
+       
         </div>     
     );
 }
