@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { saveAs } from 'file-saver';
+import { jsPDF } from "jspdf";
+
 import Header from "../../UniversalCompontes/Header";
 import Footer from "../../UniversalCompontes/Footer";
 import "./CodigoQr.css"; // Importa tu archivo CSS
@@ -11,22 +12,11 @@ const CodigoQr = () => {
   const qrFileName = "codigo_qr.pdf"; // Nombre del archivo PDF
 
   const saveAsPDF = () => {
-    const canvas = document.createElement('canvas');
-    canvas.width = 300; // Ancho del lienzo (ajusta según tus necesidades)
-    canvas.height = 300; // Alto del lienzo (ajusta según tus necesidades)
-    const context = canvas.getContext('2d');
-
-    const img = new Image();
-    img.src = qrBase64;
-    img.onload = () => {
-      context.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-      canvas.toBlob((blob) => {
-        saveAs(blob, qrFileName);
-      }, 'image/png');
-    };
+    const doc = new jsPDF();
+    doc.addImage(qrBase64, "PNG", 30, 30, 150, 150); // Añade la imagen al PDF
+    doc.save(qrFileName); // Guarda el PDF
   };
-
+  
   return (
     <div>
          <Header/>
