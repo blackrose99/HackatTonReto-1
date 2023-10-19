@@ -53,8 +53,8 @@
   }
   
   .linkbutn{
-    text-decoration: none;
     color: white;
+    text-decoration: none;
   }
   
   
@@ -76,9 +76,8 @@
     font-size: 14px;
 }
 
-
 .volver:hover {
-    color:#5f9750;
+  color: #5f9750;
 }
   
   input:hover {
@@ -87,7 +86,5 @@
   
   button:hover {
     background-color: #5f9750;
-    color: white;
-    text-decoration: none;
   }
   
